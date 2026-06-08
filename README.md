@@ -36,7 +36,7 @@ Web3Forms
 
 Add your live website link here:
 
-https://your-domain.vercel.app
+https://wanderwithaman.vercel.app
 
 📬 Connect With Me
 Instagram: Add your Instagram link
