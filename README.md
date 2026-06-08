@@ -6,13 +6,13 @@ A premium travel storytelling website where every journey becomes a chapter.
 
 Wander With Aman is a personal travel blog and portfolio that documents unforgettable experiences, destinations, photography, and adventures across India. From spiritual journeys to coastal escapes, each story captures the emotions, memories, and lessons discovered along the way.
 
-📍 Featured Journeys
-🛕 Ujjain Mahakaleshwar Jyotirlinga
-🌊 Visakhapatnam (Vizag)
-🕉️ Omkareshwar Jyotirlinga
-🚩 Salasar Balaji (Upcoming)
-🌴 Kerala Backwaters (Upcoming)
-🚀 Features
+#📍 Featured Journeys
+#🛕 Ujjain Mahakaleshwar Jyotirlinga
+#🌊 Visakhapatnam (Vizag)
+#🕉️ Omkareshwar Jyotirlinga
+#🚩 Salasar Balaji (Upcoming)
+#🌴 Kerala Backwaters (Upcoming)
+#🚀 Features
 Modern cinematic design
 Fully responsive layout
 Interactive travel journal
@@ -22,13 +22,13 @@ Embedded travel videos
 Newsletter subscription system
 SEO optimized structure
 Fast loading static website
-🛠️ Built With
-HTML5
-CSS3
-JavaScript
-Vercel Hosting
-Web3Forms
-📸 Travel Philosophy
+#🛠️ Built With
+#HTML5
+#CSS3
+#JavaScript
+#Vercel Hosting
+#Web3Forms
+#📸 Travel Philosophy
 
 "Sometimes, the road isn't meant to change your location. It's meant to change you."
 
