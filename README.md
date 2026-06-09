@@ -60,8 +60,8 @@ From spiritual journeys to coastal escapes, each story captures the emotions, me
 
 ## 📬 Connect With Me
 
-- Instagram: Your Instagram Link
-- YouTube: Your YouTube Link
+- Instagram: https://www.instagram.com/wanderwithaman29/
+- YouTube: https://www.youtube.com/@AmanKosre
 
 ---
 
