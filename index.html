@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="googleec222c5e2a61bf57.html" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Wander With Aman - A personal travel journal documenting spiritual journeys across India. Travel. Heal. Grow. Follow Aman's solo adventures to sacred destinations.">
+  <meta name="keywords" content="travel blog, India travel, solo travel, spiritual journey, travel vlog, wanderlust">
+  <meta name="author" content="Aman Kosre">
+  <meta name="theme-color" content="#C4953A">
+  <meta property="og:title" content="Wander With Aman">
+  <meta property="og:description" content="Solo Travel Stories, Photography & Adventures Across India.">
+  <meta property="og:image" content="Images/wanderwithaman.jpg">
+  <meta property="og:type" content="website">
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wander With Aman — Travel. Heal. Grow.">
+  <meta property="og:description"
+    content="A personal travel journal documenting spiritual journeys across India. Travel. Heal. Grow.">
+  <meta property="og:image" content="Images/WanderWithAman/aman-hero00.jpg">
+  <meta property="og:url" content="https://wanderwithaman.vercel.app/">
+  <meta property="og:site_name" content="Wander With Aman">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wander With Aman — Travel. Heal. Grow.">
+  <meta name="twitter:description" content="Personal travel journal of spiritual journeys across India">
+  <meta name="twitter:image" content="Images/WanderWithAman/aman-hero00.jpg">
+  <meta name="twitter:creator" content="@aman_kosre14_14">
+
+  <title>Wander With Aman — Travel. Heal. Grow.</title>
+  <link rel="canonical" href="https://wanderwithaman.vercel.app/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="Images/WanderWithAman/Favicon.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap"
+    rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Wander With Aman",
+    "description": "A personal travel journal documenting spiritual journeys across India",
+    "url": "https://wanderwithaman.vercel.app/",
+    "author": {
+      "@type": "Person",
+      "name": "Aman Kosre",
+      "url": "https://wanderwithaman.vercel.app/",
+      "sameAs": [
+        "https://www.instagram.com/wanderwithaman29/",
+        "https://www.youtube.com/@AmanKosre",
+        "https://x.com/aman_kosre14_14"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0B0907;
+      --bg2: #111009;
+      --bg3: #16130E;
+      --card: #1A1610;
+      --gold: #C4953A;
+      --gold-lt: #E3B55C;
+      --gold-dim: rgba(196, 149, 58, .18);
+      --cream: #EDE4D3;
+      --text: #8D7E6C;
+      --text-lt: #B8AA96;
+      --muted: #8B7A68;
+      --border: rgba(196, 149, 58, .11);
+      --border2: rgba(196, 149, 58, .28);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --expo: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* GRAIN */
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .038;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 26px 5%;
+      transition: background .4s ease, padding .4s ease, border-color .4s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav.scrolled {
+      background: rgba(11, 9, 7, .93);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 16px 5%;
+      border-bottom-color: var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: .06em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 38px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .73rem;
+      font-weight: 400;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-lt);
+      position: relative;
+      transition: color .3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .35s var(--expo);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 10px 22px;
+      border-radius: 2px;
+      transition: background .3s, transform .2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-lt);
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: -18%;
+      background-image: url('Images/WanderWithAman/aman-hero00.webp');
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(110deg, rgba(11, 9, 7, .9) 0%, rgba(11, 9, 7, .55) 50%, rgba(11, 9, 7, .18) 100%),
+        linear-gradient(to top, rgba(11, 9, 7, .8) 0%, transparent 40%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 7%;
+      max-width: 960px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp .8s var(--expo) .3s forwards;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      line-height: .9;
+      color: var(--cream);
+    }
+
+    .hero-line1 {
+      display: block;
+      font-size: clamp(68px, 11.5vw, 168px);
+      letter-spacing: -.01em;
+      opacity: 0;
+      animation: slideUp 1s var(--expo) .5s forwards;
+    }
+
+    .hero-line2 {
+      display: block;
+      font-size: clamp(28px, 4.6vw, 68px);
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 6px;
+      opacity: 0;
+      animation: slideUp 1s var(--expo) .7s forwards;
+    }
+
+    .hero-rule {
+      width: 56px;
+      height: 1px;
+      background: var(--gold);
+      margin: 30px 0;
+      opacity: 0;
+      animation: fadeIn .6s 1s forwards;
+    }
+
+    .hero-tagline {
+      font-size: .95rem;
+      font-weight: 300;
+      color: var(--text-lt);
+      letter-spacing: .1em;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp .8s var(--expo) 1.05s forwards;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .75rem;
+      font-weight: 400;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--cream);
+      border: 1px solid var(--border2);
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: background .3s, border-color .3s, transform .25s;
+      opacity: 0;
+      animation: fadeUp .8s var(--expo) 1.2s forwards;
+    }
+
+    .hero-btn:hover {
+      background: rgba(196, 149, 58, .1);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-btn svg {
+      transition: transform .3s;
+    }
+
+    .hero-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 4%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fadeIn .8s 1.5s forwards;
+    }
+
+    .hero-scroll span {
+      font-size: .6rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      writing-mode: vertical-lr;
+    }
+
+    .scroll-bar {
+      width: 1px;
+      height: 54px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: .35
+      }
+
+      50% {
+        opacity: 1
+      }
+    }
+
+    /* rotating badge */
+    .hero-badge {
+      position: absolute;
+      bottom: 14%;
+      right: 7%;
+      z-index: 2;
+      width: 128px;
+      height: 128px;
+      opacity: 0;
+      animation: fadeIn .8s 1.4s forwards;
+    }
+
+    .hero-badge-ring {
+      width: 100%;
+      height: 100%;
+      animation: spin 22s linear infinite;
+    }
+
+    .hero-badge-ring text {
+      font-family: var(--sans);
+      font-size: 9.2px;
+      fill: var(--gold);
+      letter-spacing: 3.8px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-profile {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 35px 0;
+    }
+
+    .hero-profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #C4953A;
+      box-shadow: 0 0 30px rgba(196, 149, 58, .25);
+    }
+
+    .hero-profile-info span {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #C4953A;
+    }
+
+    .hero-profile-info h3 {
+      color: white;
+      font-weight: 400;
+      margin-top: 4px;
+      border: 2px;
+    }
+
+    .hero-status {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 10px 18px;
+      border: 2px solid rgba(225, 130, 6, 0.411);
+      background: rgba(134, 47, 47, 0.05);
+      color: #fffefe;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* KEYFRAMES */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(42px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* TICKER */
+    .ticker {
+      overflow: hidden;
+      background: var(--gold);
+      padding: 11px 0;
+      white-space: nowrap;
+    }
+
+    .ticker-inner {
+      display: inline-flex;
+      gap: 0;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker span {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--bg);
+      padding: 0 32px;
+    }
+
+    .ticker span.dot {
+      padding: 0;
+      color: rgba(11, 9, 7, .45);
+    }
+
+    @keyframes ticker {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .9s var(--expo), transform .9s var(--expo);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 {
+      transition-delay: .1s
+    }
+
+    .d2 {
+      transition-delay: .2s
+    }
+
+    .d3 {
+      transition-delay: .3s
+    }
+
+    .d4 {
+      transition-delay: .4s
+    }
+
+    /* LAYOUT */
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    video,
+    iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+
+    .section {
+      padding: 118px 0;
+    }
+
+    /* SECTION HEADER */
+    .sh-label {
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .sh-label::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold-dim);
+      display: block;
+    }
+
+    .sh-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(40px, 5.5vw, 74px);
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .sh-desc {
+      font-size: .92rem;
+      font-weight: 300;
+      color: var(--text);
+      max-width: 440px;
+      line-height: 1.82;
+    }
+
+    .section-head {
+      margin-bottom: 60px;
+    }
+
+    /* DESTINATIONS */
+    .destinations {
+      background: var(--bg2);
+      padding: 118px;
+    }
+
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .dest-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      height: 100%;
+    }
+
+    .dest-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      cursor: pointer;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .dest-card img {
+      transition: transform .8s var(--expo);
+    }
+
+    .dest-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .dest-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 9, 7, .86) 0%, rgba(11, 9, 7, .18) 52%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 32px 34px;
+      transition: background .4s;
+    }
+
+    .dest-card:hover .dest-overlay {
+      background: linear-gradient(to top, rgba(11, 9, 7, .92) 0%, rgba(11, 9, 7, .3) 60%, rgba(11, 9, 7, .08) 100%);
+    }
+
+    .dest-info {
+      transform: translateY(6px);
+      transition: transform .4s var(--expo);
+    }
+
+    .dest-card:hover .dest-info {
+      transform: translateY(0);
+    }
+
+    .dest-region {
+      display: block;
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 7px;
+    }
+
+    .dest-name {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2.1rem;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 13px;
+    }
+
+    .dest-stack .dest-name {
+      font-size: 1.65rem;
+    }
+
+    .dest-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity .3s .08s, transform .3s .08s var(--expo);
+    }
+
+    .dest-card:hover .dest-link {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .destinations-layout {
+      display: grid;
+      grid-template-columns: 3.5fr .8fr;
+      gap: 80px;
+      align-items: start;
+      margin-bottom: 80px;
+    }
+    
+
+    .future-destinations {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .future-card {
+      padding: 20px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(196, 149, 58, .15);
+      backdrop-filter: blur(10px);
+    }
+
+    .future-card span {
+      display: block;
+      margin-top: 10px;
+      color: #C4953A;
+      letter-spacing: .08em;
+    }
+
+    .future-card:hover {
+      transform: translateY(-6px);
+      border-color: #C4953A;
+    }
+
+    .future-card span {
+      color: #C4953A;
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* JOURNAL */
+    .journal {
+      background: var(--bg);
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .j-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      transition: border-color .3s, transform .4s var(--expo);
+    }
+
+    .j-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-5px);
+    }
+
+    .j-card--feat {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      height: 390px;
+    }
+
+    .j-img {
+      overflow: hidden;
+    }
+
+    .j-card--feat .j-img {
+      height: 100%;
+    }
+
+    .j-card:not(.j-card--feat) .j-img {
+      height: 218px;
+    }
+
+    .j-img img {
+      transition: transform .7s var(--expo);
+    }
+
+    .j-card:hover .j-img img {
+      transform: scale(1.05);
+    }
+
+    .j-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .j-card--feat .j-body {
+      padding: 42px;
+    }
+
+    .j-tag {
+      display: inline-block;
+      font-size: .6rem;
+      font-weight: 400;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(196, 149, 58, .07);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    .j-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.48rem;
+      color: var(--cream);
+      line-height: 1.22;
+      margin-bottom: 12px;
+    }
+
+    .j-card--feat .j-title {
+      font-size: 1.95rem;
+    }
+
+    .j-excerpt {
+      font-size: .87rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .j-meta {
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .07em;
+      color: var(--muted);
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .j-readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 20px;
+      transition: gap .3s;
+    }
+
+    .j-card:hover .j-readmore {
+      gap: 13px;
+    }
+
+    /* STATS */
+    .stats {
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      padding: 38px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(52px, 6vw, 86px);
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 10px;
+      letter-spacing: -.01em;
+    }
+
+    .stat-lbl {
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* NEWSLETTER */
+    .newsletter {
+      background: var(--bg);
+      padding: 118px 0;
+    }
+
+    .nl-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+    }
+
+    .nl-inner::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      bottom: 10%;
+      width: 1px;
+      background: var(--border);
+      transform: translateX(-50%);
+    }
+
+    .nl-head {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(34px, 4vw, 52px);
+      color: var(--cream);
+      line-height: 1.1;
+      margin: 14px 0 16px;
+    }
+
+    .nl-text {
+      font-size: .88rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.84;
+    }
+
+    .nl-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .nl-form input {
+      background: transparent;
+      border: 1px solid var(--border2);
+      border-radius: 2px;
+      padding: 15px 20px;
+      font-family: var(--sans);
+      font-size: .9rem;
+      font-weight: 300;
+      color: var(--cream);
+      outline: none;
+      transition: border-color .3s;
+    }
+
+    .nl-form input::placeholder {
+      color: var(--muted);
+    }
+
+    .nl-form input:focus {
+      border-color: var(--gold);
+    }
+
+    .nl-form button {
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      border-radius: 2px;
+      padding: 15px 28px;
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .3s, transform .2s;
+    }
+
+    .nl-form button:hover {
+      background: var(--gold-lt);
+      transform: translateY(-1px);
+    }
+
+    .nl-note {
+      font-size: .7rem;
+      color: var(--muted);
+    }
+
+    .travel-timeline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .route-stop {
+      text-align: center;
+    }
+
+    .route-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #C4953A;
+      margin: auto auto 10px;
+      box-shadow: 0 0 20px rgba(196, 149, 58, .5);
+    }
+
+    .route-line {
+      width: 100px;
+      height: 2px;
+      background: #C4953A;
+      opacity: .4;
+    }
+
+    .route-stop h4 {
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .route-stop span {
+      color: #999;
+      font-size: .85rem;
+    }
+
+    .travel-video {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(196, 149, 58, .15);
+      overflow: hidden;
+    }
+
+    .photo-wall {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .photo-wall img {
+      height: 320px;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: .4s;
+      cursor: pointer;
+    }
+
+    .photo-wall img:hover {
+      transform: scale(1.03);
+    }
+
+    .comments-section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .comments-section h2 {
+      text-align: center;
+      color: #C4953A;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #080605;
+      border-top: 1px solid var(--border);
+      padding: 72px 0 40px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.75rem;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+
+    .footer-tagline {
+      font-size: .72rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .footer-blurb {
+      font-size: .84rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.84;
+      max-width: 270px;
+    }
+
+    .footer-col-title {
+      font-size: .65rem;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-list a {
+      font-size: .84rem;
+      font-weight: 300;
+      color: var(--text);
+      transition: color .3s;
+    }
+
+    .footer-list a:hover {
+      color: var(--gold);
+    }
+
+    .soc-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .soc-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--text);
+      transition: color .3s;
+    }
+
+    .soc-link:hover {
+      color: var(--gold);
+    }
+
+    .soc-icon {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-copy,
+    .footer-made {
+      font-size: .72rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: .07em;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1024px) {
+      .dest-grid {
+        grid-template-columns: 1fr 1fr;
+        height: 560px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(1),
+      .stat:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+
+    @media(max-width:768px) {
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .hero-badge {
+        display: none;
+      }
+
+      .dest-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .dest-card {
+        height: 300px;
+        flex: none;
+      }
+
+      .dest-stack {
+        height: auto;
+      }
+
+      .journal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .j-card--feat {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .j-card--feat .j-img {
+        height: 230px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nl-inner {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .nl-inner::before {
+        display: none;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .travel-timeline {
+        flex-direction: column;
+      }
+
+      .route-line {
+        width: 2px;
+        height: 50px;
+      }
+
+      .photo-wall {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-grid img {
+      transition: .5s;
+    }
+
+    .about-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    .about-image img {
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .about-content {
+      color: #d6d6d6;
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 55px;
+      height: 55px;
+      border: none;
+      border-radius: 50%;
+      background: #C4953A;
+      color: #fff;
+      z-index: 99999;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s, background .3s;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-5px);
+      background: #d8a84b;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Tablet */
+    @media (max-width:1024px) {
+
+      .hero-title {
+        font-size: 4rem;
+      }
+
+    }
+
+    /* Mobile */
+    @media (max-width:768px) {
+      .hero {
+        min-height: 80vh;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .section {
+        padding: 118px 0;
+      }
+
+    }
+
+    /* Small Mobile */
+    @media (max-width:480px) {
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: .9rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grain"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">W · A</a>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#journal">Journal</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#newsletter">Contact</a></li>
+    </ul>
+    <a href="#destinations" class="nav-cta">Explore</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-label">01 — Travel Journal</span>
+      <h1 class="hero-title">
+        <span class="hero-line1">Wander</span>
+        <span class="hero-line2">With Aman</span>
+      </h1>
+      <div class="hero-rule"></div>
+      <p class="hero-tagline">Travel · Heal · Grow</p>
+      <div class="hero-profile">
+
+        <img src="Images/WanderWithAman/wanderwithaman.jpg" alt="Aman" loading="lazy">
+
+        <div class="hero-profile-info">
+          <span>Travel Creator</span>
+          <h3>Aman Kosre</h3>
+        </div>
+        <div class="hero-status">
+          📍 Currently Planning • Omkareshwar • Rajasthan • Kerala
+        </div>
+      </div>
+      <a href="#destinations" class="hero-btn">
+        Begin The Journey →
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+          <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+
+    <div class="hero-badge">
+      <svg class="hero-badge-ring" viewBox="0 0 120 120">
+        <defs>
+          <path id="bp" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1-92,0" />
+        </defs>
+        <text>
+          <textPath href="#bp" xlink:href="#bp">TRAVEL · HEAL · GROW · WANDER · </textPath>
+        </text>
+      </svg>
+      <div class="hero-badge-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C4953A" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4l3 3" />
+          <path d="M2 12h2M20 12h2M12 2v2M12 20v2" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>Wander</span><span class="dot">·</span>
+      <span>Bhopal</span><span class="dot">·</span>
+      <span>Ujjain</span><span class="dot">·</span>
+      <span>Vizag</span><span class="dot">·</span>
+      <span>Travel</span><span class="dot">·</span>
+      <span>Heal</span><span class="dot">·</span>
+      <span>Grow</span><span class="dot">·</span>
+      <span>Explore</span><span class="dot">·</span>
+      <span>Wander</span><span class="dot">·</span>
+      <span>Bhopal</span><span class="dot">·</span>
+      <span>Ujjain</span><span class="dot">·</span>
+      <span>Vizag</span><span class="dot">·</span>
+      <span>Travel</span><span class="dot">·</span>
+      <span>Heal</span><span class="dot">·</span>
+      <span>Grow</span><span class="dot">·</span>
+      <span>Explore</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations section"id="destinations">
+    <div class="destinations-layout">
+
+      <div class="destinations-left">
+
+        <div class="section-head">
+          <div class="sh-label">02 — DESTINATIONS</div>
+          <h2 class="sh-title">Where to Next</h2>
+        </div>
+
+        <p>
+          From the sacred shores of Omkareshwar, where the gentle whispers of the Narmada carry centuries of devotion,
+          to the spiritual energy of Salasar Balaji that echoes through the heart of Rajasthan, and onward to the
+          tranquil emerald backwaters of Kerala—every destination is more than a place on the map; it is a chapter in a
+          journey of discovery.
+
+          These upcoming adventures are not merely about covering distances, but about embracing stories, cultures,
+          traditions, and the countless moments that make travel meaningful. Along the way, I hope to capture the soul
+          of each destination through photographs, stories, and experiences that inspire curiosity and connection.
+
+          Join me as I continue exploring the diverse landscapes of India—one sunrise, one train ride, one conversation,
+          and one unforgettable chapter at a time. The road ahead is long, the stories are waiting, and the journey has
+          only just begun.
+
+        </p>
+
+      </div>
+
+      <div class="destinations-right">
+
+        <div class="future-destinations">
+
+          <div class="future-card">
+            📍 Omkareshwar
+            <span>Coming Soon</span>
+          </div>
+
+          <div class="future-card">
+            📍 Salasar Balaji
+            <span>Planned</span>
+          </div>
+
+          <div class="future-card">
+            📍 Kerala
+            <span>Dream Route</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="journal section" id="journal">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="sh-label">03 — Latest Stories</div>
+        <h2 class="sh-title">From the Journal</h2>
+      </div>
+      <div class="journal-grid">
+        <!-- Featured -->
+        <article class="j-card j-card--feat reveal">
+          <div class="j-img">
+            <img src="Images/Ujjain/Ujjain Hero Image.webp" alt="Ujjain Mahakaleshwar Jyotirling" loading="lazy">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Ujjain Mahakaleshwar Jyotirling · Madhya Pradesh</span>
+            <h3 class="j-title">Chapter 01: The Divine Calling.</h3>
+            <p class="j-excerpt">Following the path where life takes me—from divine callings to the unknown roads of
+              India.</p>
+            <div class="j-meta">
+              <span>March 2025</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
+            <a href="ujjain-mahakal.html" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <article class="j-card j-card--feat reveal">
+          <div class="j-img">
+            <img src="Images/Vizag/Story-vizag1.webp" alt="Visakhapatnam Story" loading="lazy">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Visakhapatnam · Andhra Pradesh</span>
+            <h3 class="j-title">Chapter 02: The Ocean Answered</h3>
+            <p class="j-excerpt">A journey of rain, roads, beaches & memories. From RK Beach to Araku Valley, where
+              manifestation met reality.</p>
+            <div class="j-meta">
+              <span>May 2026</span>
+              <span>·</span>
+              <span>12 min read</span>
+            </div>
+            <a href="vizag-vishakhapatnam.html" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <article class="j-card j-card--feat reveal">
+          <div class="j-img">
+            <img src="Images/Omkareshwar/Om.webp" alt="Omkareshwar Narmada River" loading="lazy">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Omkareshwar · Madhya Pradesh</span>
+            <h3 class="j-title">Chapter 03: The River That Calls Back</h3>
+            <p class="j-excerpt">A spiritual journey to the sacred Omkareshwar where the Narmada flows and time slows
+              down.</p>
+            <div class="j-meta">
+              <span>Coming Soon</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
+            <a href="omkareshwar.html" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+        <!-- Chapter 04 - Salasar Balaji -->
+        <article class="j-card reveal d3">
+          <div class="j-img">
+            <img src="Images/Balaji/Balaji.webp" alt="Salasar Balaji Temple Rajasthan" loading="lazy">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Salasar Balaji · Rajasthan</span>
+            <h3 class="j-title">Chapter 04: The Desert of Faith</h3>
+            <p class="j-excerpt">Where unwavering devotion and spiritual energy transform every soul that arrives with
+              hope in their heart.</p>
+            <div class="j-meta">
+              <span>Coming Soon</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
+            <a href="salasar-balaji.html" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Chapter 05 - Kerala Backwaters -->
+        <article class="j-card reveal d4">
+          <div class="j-img">
+            <img src="Images/Kerala/Kerala.webp" alt="Kerala Backwaters Houseboat" loading="lazy">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Kerala · Backwaters</span>
+            <h3 class="j-title">Chapter 05: Where The Earth Meets Peace</h3>
+            <p class="j-excerpt">A journey through Kerala where life slows down, and silence speaks louder than words.
+            </p>
+            <div class="j-meta">
+              <span>Coming Soon</span>
+              <span>·</span>
+              <span>8 min read</span>
+            </div>
+            <a href="kerala-backwaters.html" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Smaller cards -->
+        <!-- <article class="j-card reveal d1">
+          <div class="j-img">
+            <img src="https://picsum.photos/seed/araku-rail/900/600" alt="Journey to Araku">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Araku · Rail Journey</span>
+            <h3 class="j-title">Journey to Araku — India's Most Scenic Rail Route</h3>
+            <div class="j-meta">
+              <span>February 2024</span>
+              <span>·</span>
+              <span>6 min read</span>
+            </div>
+            <a href="#" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="j-card reveal d2">
+          <div class="j-img">
+            <img src="https://picsum.photos/seed/vizag-golden/900/600" alt="Golden Hour Vizag">
+          </div>
+          <div class="j-body">
+            <span class="j-tag">Vizag · Photography</span>
+            <h3 class="j-title">Golden Hour at Vizag — Chasing Light Along the Shore</h3>
+            <div class="j-meta">
+              <span>January 2024</span>
+              <span>·</span>
+              <span>5 min read</span>
+            </div>
+            <a href="#" class="j-readmore">
+              Read Story
+              <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
+                <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </article> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="about">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num" data-target="2" data-suffix="+">2</div>
+          <div class="stat-lbl">Trips Completed</div>
+        </div>
+        <div class="stat reveal d1">
+          <div class="stat-num" data-target="1000">1000</div>
+          <div class="stat-lbl">Photos Captured</div>
+        </div>
+        <div class="stat reveal d2">
+          <div class="stat-num" data-target="4">4</div>
+          <div class="stat-lbl">States Visited</div>
+        </div>
+        <div class="stat reveal d3">
+          <div class="stat-num" data-target="1669" data-suffix="+">1669+</div>
+          <div class="stat-lbl">KM Travelled</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="sh-label">04 — About Aman</div>
+        <h2 class="sh-title">The Story Behind The Journey</h2>
+      </div>
+
+      <!-- ABOUT GRID -->
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img src="Images/WanderWithAman/About-image.webp" alt="About Aman" loading="lazy">
+        </div>
+
+        <div class="about-content">
+          <p>
+            I am Aman, an explorer and storyteller born and raised in the city of Durg, Chhattisgarh. Now 26, I have set
+            my sights on a lifelong mission: to explore the vast, diverse landscape of India.
+
+            I believe that every destination carries a unique legacy, and every journey leaves behind a memory meant to
+            be cherished. Whether traveling solo or venturing out with a group, my goal is to capture every fleeting
+            moment and turn it into a lasting memory. From the rhythmic clatter of trains across the plains to the
+            silence of majestic peaks and the hidden serenity of our coastlines, I translate these experiences into
+            visual and written stories.
+
+            For as long as I live, I want to keep moving. My journey is defined by the thrill of discovering new cities,
+            savoring local flavors, meeting new people, and embracing every unexpected adventure that comes my way. I am
+            here to document the untold chapters of our country, one journey at a time. Join me, fellow wanderers, as we
+            build a collection of memories that last a lifetime.
+          </p>
+        </div>
+
+      </div>
+      <!-- <div class="about-grid">
+
+        <img src="Images/Story.webp" style="
+          width:106%;
+          border-radius:19px;
+        ">
+
+        <div>
+          <p class="sh-desc">
+            I am Aman, an explorer and storyteller born and raised in the city of Durg, Chhattisgarh. Now 26, I have set
+            my sights on a lifelong mission: to explore the vast, diverse landscape of India.
+
+            I believe that every destination carries a unique legacy, and every journey leaves behind a memory meant to
+            be cherished. Whether traveling solo or venturing out with a group, my goal is to capture every fleeting
+            moment and turn it into a lasting memory. From the rhythmic clatter of trains across the plains to the
+            silence of majestic peaks and the hidden serenity of our coastlines, I translate these experiences into
+            visual and written stories.
+
+            For as long as I live, I want to keep moving. My journey is defined by the thrill of discovering new cities,
+            savoring local flavors, meeting new people, and embracing every unexpected adventure that comes my way. I am
+            here to document the untold chapters of our country, one journey at a time. Join me, fellow wanderers, as we
+            build a collection of memories that last a lifetime.
+          </p>
+        </div>
+
+      </div> -->
+
+    </div>
+  </section>
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="sh-label">05 — Featured Reel</div>
+        <h2 class="sh-title">Travel Cinematic</h2>
+      </div>
+
+      <video class="travel-video" autoplay muted loop playsinline preload="metadata">
+
+        <source src="Videos/Travel-cinematic.mp4" type="video/mp4">
+
+      </video>
+
+    </div>
+
+  </section>
+  <section class="stats">
+
+    <div class="container">
+
+      <h2 class="sh-title">
+        Travel Route
+      </h2>
+
+      <div style="
+  display:flex;
+  justify-content:center;
+  gap: 100px;
+  font-size: 20px;
+  font-family: georgia, serif;
+  color:#C4953A;
+">
+
+        <div class="travel-timeline">
+
+          <div class="route-stop">
+            <div class="route-dot"></div>
+            <h4>Durg</h4>
+            <span>Chhattisgarh</span>
+          </div>
+
+          <div class="route-line"></div>
+
+          <div class="route-stop">
+            <div class="route-dot"></div>
+            <h4>Vizag</h4>
+            <span>Andhra Pradesh</span>
+          </div>
+
+          <div class="route-line"></div>
+
+          <div class="route-stop">
+            <div class="route-dot"></div>
+            <h4>Araku Valley</h4>
+            <span>Andhra Pradesh</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="nl-inner">
+        <div class="reveal">
+          <div class="sh-label">Stay Inspired</div>
+          <h2 class="nl-head">New stories, every fortnight.</h2>
+          <p class="nl-text">No spam — just travel tales, hidden trails, quiet dawns, and the kind of stories that make
+            you want to leave again.</p>
+        </div>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST" class="nl-form reveal d1">
+          <input type="hidden" name="access_key" value="14ddcf8f-a0e5-4d8c-91b5-b2ee3dcfb542">
+          <input type="hidden" name="subject" value="New Wander With Aman Subscriber">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <input type="text" name="name" placeholder="Enter your name" required>
+          <input type="email" name="email" placeholder="Enter your email" required>
+
+          <button type="submit">
+            Subscribe To Journey
+          </button>
+          <p class="nl-note">
+            Join the journey and receive future travel stories directly in your inbox.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="sh-label">06 — Gallery</div>
+        <h2 class="sh-title">Captured Moments</h2>
+      </div>
+
+      <div class="photo-wall">
+
+        <img src="Images/Ujjain/8.jpg" alt="Gallery Image 1" style="object-position: center;" loading="lazy">
+        <img src="Images/Vizag/fish-port.webp" alt="Gallery Image 2" loading="lazy">
+        <img src="Images/Ujjain/04.webp" alt="Gallery Image 3" style="object-position: top;" loading="lazy">
+        <img src="Images/Ujjain/05.webp" alt="Gallery Image 4" style="object-position: center;" loading="lazy">
+        <img src="Images/Ujjain/022.webp" alt="Gallery Image 5" loading="lazy">
+        <img src="Images/Ujjain/07.webp" alt="Gallery Image 6" loading="lazy">
+
+      </div>
+
+    </div>
+    <section class="comments-section">
+
+      <h2>Share Your Thoughts</h2>
+
+      <!-- Giscus Code Here -->
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        };
+
+        (function () {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+
+      <noscript>
+        Please enable JavaScript to view the comments powered by Disqus.
+      </noscript>
+    </section>
+  </section>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Wander With Aman</div>
+          <div class="footer-tagline">Travel · Heal · Grow</div>
+          <p class="footer-blurb">A personal travel journal documenting journeys across India and beyond — chasing
+            sunrises, mountain silences, and the stories that live in between.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Explore</div>
+          <ul class="footer-list">
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#about">About Aman</a></li>
+            <li><a href="#newsletter">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <div class="soc-links">
+            <a href="https://www.instagram.com/wanderwithaman29/" target="_blank" rel="noopener noreferrer"
+              class="soc-link">
+              <svg class="soc-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/@AmanKosre" target="_blank" rel="noopener noreferrer" class="soc-link">
+              <svg class="soc-icon" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              YouTube
+            </a>
+            <a href="https://x.com/aman_kosre14_14" target="_blank" rel="noopener noreferrer" class="soc-link">
+              <svg class="soc-icon" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              Twitter / X
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Wander With Aman. All rights reserved.</p>
+        <p class="footer-made">Crafted with passion for the road.</p>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop">
+    ⬆
+  </button>
+  <script>
+    // Nav on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Hero parallax with throttling
+    const heroBg = document.getElementById('heroBg');
+    const PARALLAX_SPEED = 0.22;
+    const BLUR_DIVISOR = 40;
+    const OPACITY_DIVISOR = 1200;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking && heroBg) {
+        requestAnimationFrame(() => {
+          const scroll = window.scrollY;
+          heroBg.style.transform = `translateY(${scroll * PARALLAX_SPEED}px) scale(${1 + scroll / 6000})`;
+          heroBg.style.filter = `blur(${Math.min(scroll / BLUR_DIVISOR, 12)}px)`;
+          heroBg.style.opacity = 1 - scroll / OPACITY_DIVISOR;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Count-up for stats
+    function countUp(el, target, suffix) {
+      const dur = 1700;
+      const t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.floor(eased * target);
+        el.textContent = val >= 1000 ? (val / 1000).toFixed(1) + 'k' + (suffix || '') : val + (suffix || '');
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target >= 1000 ? (target / 1000).toFixed(1) + 'k' + (suffix || '') : target + (suffix || '');
+      };
+      requestAnimationFrame(tick);
+    }
+
+    const statObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target.querySelector('[data-target]');
+        if (!el || el.dataset.done) return;
+        el.dataset.done = '1';
+        countUp(el, +el.dataset.target, el.dataset.suffix || '');
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat').forEach(el => statObs.observe(el));
+
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+
+      if (window.scrollY > 500) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+
+    });
+
+    backToTop.addEventListener('click', () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+    });
+  </script>
+  <script src="https://giscus.app/client.js" data-repo="kosreak29/WanderWithAman" data-repo-id="R_kgDOS0g1ag"
+    data-category="General" data-category-id="DIC_kwDOS0g1as4C-y3x" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en"
+    crossorigin="anonymous" async>
+    </script>
+
+</body>
+
+</html>

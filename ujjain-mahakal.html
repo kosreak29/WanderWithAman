@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="My first solo trip to Ujjain — A spiritual journey to Mahakaleshwar Jyotirlinga where I discovered myself. Read the complete story.">
+    <meta name="keywords" content="solo travel, Ujjain, Mahakaleshwar, spiritual journey, India travel, self-discovery">
+    <meta name="author" content="Aman Kosre">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Chapter 01: The Divine Calling — My First Solo Trip to Ujjain">
+    <meta property="og:description" content="A spiritual journey to Mahakaleshwar Jyotirlinga where I met myself.">
+    <meta property="og:image" content="https://wanderwithaman.com/Images/Jyotirlinga11.webp">
+    <meta property="og:url" content="https://wanderwithaman.com/ujjain-mahakal.html">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chapter 01: The Divine Calling — Solo to Ujjain">
+    <meta name="twitter:description" content="A spiritual solo journey where I found myself.">
+    <meta name="twitter:image" content="Images/Ujjain/Jyotirlinga11.jpg">
+    <meta name="twitter:creator" content="@aman_kosre14_14">
+
+    <title>Chapter 01: The Divine Calling — Mahakaleshwar Solo Journey</title>
+    <link rel="canonical" href="https://wanderwithaman.com/ujjain-mahakal.html">
+
+    <style>
+        body {
+            background: rgba(11, 9, 7, 0.93);
+            color: #ebebeb;
+            font-family: georgia, serif, 'Times New Roman', Times, serif;
+            margin: 0;
+        }
+
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .hero {
+            position: relative;
+            height: 80vh;
+            overflow: hidden;
+        }
+
+        .trip-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 15px 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: .3s ease;
+            cursor: pointer;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(196, 149, 58, .2);
+            border-color: #C4953A;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('Images/Ujjain/Jyotirlinga11.jpg') center/cover;
+
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, .2),
+                    rgba(0, 0, 0, .75));
+            z-index: 1;
+        }
+
+        .story p:first-of-type::first-letter {
+            font-size: 70px;
+            float: left;
+            line-height: 60px;
+            padding-right: 10px;
+            color: #C4953A;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 20vh;
+        }
+
+        .overlay {
+            transform: translateY(80px);
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            letter-spacing: 2px;
+            opacity: .85;
+            margin-top: -10px;
+        }
+
+        /* .overlay {
+            position: relative;
+            z-index: 2;
+        } */
+        .trip-badge {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #C4953A;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: clamp(60px, 8vw, 120px);
+            color: white;
+            letter-spacing: -2px;
+            text-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+        }
+
+        .story {
+            font-size: 18px;
+            line-height: 1.9;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            transition: .4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: #C4953A;
+            z-index: 99999;
+        }
+
+        .quote-box {
+            max-width: 900px;
+            margin: 0px auto;
+            padding: 1px;
+            font-size: 22px;
+            line-height: 1.7;
+            font-style: georgia, serif, 'Times New Roman', Times, serif;
+            text-align: center;
+            border-left: 4px solid #C4953A;
+            background: rgba(255, 255, 255, .03);
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(196, 149, 58, .08);
+        }
+
+        .scroll-indicator {
+            text-align: center;
+            padding: 20px;
+            opacity: .7;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        .story h2 {
+            font-size: 42px;
+            color: #fff;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            width: 100%;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .author-card {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .author-card {
+            padding: 40px;
+            background: rgba(255, 255, 255, .03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .author-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #C4953A;
+        }
+
+        .author-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .author-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 1px solid rgba(196, 149, 58, .4);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, .03);
+            transition: .3s ease;
+        }
+
+        .author-links a:hover {
+            background: #C4953A;
+            color: #111;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(196, 149, 58, .3);
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background: #C4953A;
+            color: #fff;
+            z-index: 99999;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, background .3s;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #d8a84b;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #C4953A;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: #d8a84b;
+        }
+
+        .story-video {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        .story-video video {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+        }
+
+        .video-caption {
+            text-align: center;
+            margin-top: 12px;
+            color: #C4953A;
+            font-style: italic;
+            opacity: .9;
+        }
+
+        .footer {
+            background: rgba(8, 6, 5, 0.8);
+            color: #999;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(196, 149, 58, .1);
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .comments-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+
+        .comments-section h2 {
+            text-align: center;
+            color: #C4953A;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+
+<body id="top">
+    <div id="progressBar"></div>
+    <section class="hero">
+
+        <div class="hero-bg"></div>
+        <canvas id="particles"></canvas>
+
+        <div class="overlay">
+            <h1>Chapter 01</h1>
+            <h2>The Divine Calling</h2>
+
+            <p class="hero-subtitle">
+                A Journey to Mahakaleshwar and Myself
+            </p>
+        </div>
+
+    </section>
+    <div class="scroll-indicator">
+        ↓ Scroll To Begin Journey ↓
+    </div>
+    <div class="trip-info">
+
+        <div class="info-card">
+            📍 Ujjain, Madhya Pradesh
+        </div>
+
+        <div class="info-card">
+            🚆 Solo Journey
+        </div>
+
+        <div class="info-card">
+            📅 March 2025
+        </div>
+
+        <div class="info-card">
+            ⏱ 8 Min Read
+        </div>
+        <div class="trip-badge">
+            🚩 Solo Travel • Spiritual Journey • Self Discovery
+        </div>
+    </div>
+    <div class="quote-box">
+        "Sometimes, God does not invite us on a journey to find Him...
+        He invites us so that we may discover ourselves along the way."
+    </div>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <div class="story">
+
+            <h2>
+                My First Solo Trip to Ujjain –
+                A Journey to Mahakaleshwar and Myself
+            </h2>
+
+            <p>Sometimes, a journey begins with a call...
+
+                Not every trip starts with careful planning. Some journeys begin with a feeling, a pull, an invitation
+                from somewhere beyond our understanding.
+
+                My first solo trip was exactly that.
+
+                There was no elaborate itinerary, no travel companion, and no detailed preparation. There was only a
+                desire to visit the sacred Mahakaleshwar Jyotirlinga and perhaps, a silent calling from Mahakal Himself.
+
+                With a backpack on my shoulders and excitement in my heart, I set out for Ujjain.
+
+                At that moment, I had no idea that this would become more than just a travel experience. It would become
+                one of the most memorable and transformative journeys of my life.
+
+            </p>
+            <h2>The First Step Towards Solo Travel</h2>
+
+            <p>
+                To be honest, the idea of solo travel was both exciting and intimidating.
+
+                Travelling alone.
+
+                Making every decision on my own.
+
+                Spending so much time with myself.
+
+                It felt unfamiliar.
+
+                Yet somewhere deep inside, I knew that growth rarely happens inside our comfort zones.
+
+                As the train slowly departed from the station, I looked around and realized that I had no one beside me.
+
+                No friends.
+
+                No family.
+
+                No travel partner.
+
+                Just me and an unknown adventure waiting ahead.
+
+                For the first time, I felt truly responsible for my own journey.
+
+                And strangely, that feeling was liberating.
+
+            </p>
+            <h2>Arrival in Ujjain – The City of Mahakal</h2>
+            <!-- <img src="Images/Ujjain/05.jpg" class="story-image"
+                alt="Sacred rituals at Mahakaleshwar temple - pilgrims gathered for darshan"> -->
+            <p>
+                By evening, I finally arrived in Ujjain.
+
+                After a long journey, my body was exhausted. Sleep filled my eyes, and every muscle carried the weight
+                of travel fatigue.
+
+                But my excitement to visit Mahakaleshwar was stronger than any tiredness.
+
+                Instead of resting at the hotel, I headed straight towards the temple.
+
+                And what happened next is something that words can barely describe.
+
+            </p>
+
+            <h2>The First Darshan</h2>
+            <div class="story-video">
+                <video autoplay muted loop playsinline>
+                    <source src="Videos/First-darshan.mp4" type="video/mp4">
+                </video>
+                <p class="video-caption">
+                    The first glimpse of Mahakaleshwar — a moment of peace, devotion, and gratitude.
+                </p>
+            </div>
+            <!-- <video width="100%" autoplay muted loop controls style="border-radius: 15px; margin: 30px 0;">
+                <source src="Videos/First-darshan.mp4" type="video/mp4">
+            </video> -->
+
+            <img src="Images/Ujjain/First-darshan.webp" class="story-image"
+                alt="First Darshan moment at Mahakaleshwar Jyotirlinga">
+            <p>The moment I stood before the Mahakaleshwar Jyotirlinga, something changed within me.
+
+                It felt as if every ounce of fatigue disappeared instantly.
+
+                The burden I had been carrying felt lighter.
+
+                The noise inside my mind faded away.
+
+                For a few moments, there was only silence.
+
+                Only peace.
+
+                Standing inside the sacred temple premises, I found myself whispering a simple thought:
+
+                "I am here, Baba."
+
+                I was fortunate enough to receive darshan that evening and once again the following morning.
+
+                Every visit felt different.
+
+                Every moment carried a unique sense of energy and calmness.
+            </p>
+            <h2>More Than a Temple</h2>
+            <p>
+                Mahakaleshwar did not feel like just another temple.
+
+                It felt like an experience.
+
+                The ringing bells.
+
+                The devotion of countless pilgrims.
+
+                The sacred morning air.
+
+                The powerful presence within the temple walls.
+
+                Everything left a lasting impression on my heart.
+
+                I captured many moments with my camera, but some memories were too special to be photographed.
+
+                Those memories were meant to stay within the soul.
+
+            </p>
+
+            <h2>A Wish Left for the Next Journey</h2>
+            <p>
+                This journey blessed me with the opportunity to visit Mahakaleshwar.
+
+                Yet one wish remains unfulfilled.
+
+                To witness the famous Bhasma Aarti with my own eyes.
+
+                Perhaps Mahakal will call me again someday.
+
+                And when that day comes, I hope to experience one of the most sacred rituals in India firsthand.
+
+                Until then, that wish remains alive within me.
+            </p>
+            <h2>The Greatest Gift of This Journey</h2>
+            <img src="Images/Ujjain/04.webp" class="story-image"
+                alt="Journey Gallery - Ujjain travel memories and spiritual moments">
+            <p>
+                When I left for Ujjain, I travelled alone.
+
+                But when I returned, I was no longer the same person.
+
+                This journey certainly brought me closer to Mahakal.
+
+                But more importantly, it brought me closer to myself.
+
+                I began understanding my thoughts more clearly.
+
+                I started enjoying my own company.
+
+                I learned to appreciate silence.
+
+                The sunrise.
+
+                The rhythm of travel.
+
+                The sound of temple bells.
+
+                The beauty hidden within life's simplest moments.
+
+                Everything felt more meaningful than before.
+            </p>
+            <h2>What Mahakal Taught Me</h2>
+
+            <p>
+                This solo trip taught me a lesson I will never forget.
+
+                Sometimes, God does not call us to a place so that we can find Him.
+
+                Sometimes, He calls us there so that we can find ourselves.
+
+                Looking back today, I feel that Mahakal invited me to Ujjain not only for darshan, but to help me
+                rediscover the version of myself that had been lost in the noise of everyday life.
+            </p>
+            <h2>The End... Or A New Beginning?</h2>
+            <p>
+                I travelled to Ujjain hoping to meet Mahakal.
+
+                But I returned having met myself.
+
+                This was my first solo trip.
+
+                Yet deep down, I know it was only the beginning.
+
+                The beginning of a larger journey.
+
+                A journey of exploration.
+
+                A journey of self-discovery.
+
+                A journey that continues with every road I choose to follow.
+            </p>
+            🚩 Har Har Mahadev 🚩
+            <br>
+            🔱 Jai Mahakal 🔱
+            <br>
+            — Aman K
+            <br>(WanderWithAman)
+
+
+        </div>
+        <div class="quote-box">
+
+            I Went To Meet Mahakal,
+            But Returned Meeting Myself.
+
+        </div>
+        
+        <section class="comments-section">
+
+            <h2>Share Your Thoughts</h2>
+
+            <!-- Giscus Code Here -->
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = window.location.pathname;
+                };
+
+                (function () {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+
+            <noscript>
+                Please enable JavaScript to view the comments powered by Disqus.
+            </noscript>
+        </section>
+        <h2>Journey Gallery</h2>
+        <div class="gallery">
+
+            <img src="Images/Ujjain/022.webp" alt="Sacred rituals at Mahakaleshwar temple" width="200" height="400">
+            <img src="Images/Ujjain/07.webp" alt="Pilgrims gathering at Ujjain temple" width="200" height="400">
+            <img src="Images/Ujjain/9.jpg" alt="Evening aarti at Mahakaleshwar temple" width="200" height="400">
+            <img src="Images/Ujjain/Kalbhairav.webp" alt="Kal Bhairav temple in Ujjain" width="200" height="400">
+
+        </div>
+        <div class="author-card">
+
+            <img src="Images/WanderWithAman/wanderwithaman.jpg">
+
+            <h3>Aman K</h3>
+            <h5>Wander With Aman ✈️🌍</h5>
+
+            <p>
+                Travel • Heal • Grow
+            </p>
+
+            <div class="author-links">
+
+                <a href="https://www.instagram.com/wanderwithaman29/" target="_blank" rel="noopener noreferrer">
+                    📸 Follow on Instagram
+                </a>
+
+                <a href="https://www.youtube.com/@AmanKosre" target="_blank" rel="noopener noreferrer">
+                    ▶ Watch on YouTube
+                </a>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>© 2025 Wander With Aman. All rights reserved.</p>
+            <p>Chapter 01: The Divine Calling — Ujjain</p>
+        </div>
+    </div>
+    <button class="back-to-top" id="backToTop">
+        ⬆
+    </button>
+    <script>
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+
+        document.querySelector('.hero').addEventListener('mousemove', (e) => {
+
+            const rect = canvas.getBoundingClientRect();
+
+            for (let i = 0; i < 3; i++) {
+                particles.push({
+                    x: e.clientX - rect.left,
+                    y: e.clientY - rect.top,
+                    size: Math.random() * 4 + 1,
+                    speedX: (Math.random() - 0.5) * 2,
+                    speedY: (Math.random() - 0.5) * 2,
+                    life: 60
+                });
+            }
+        });
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = particles.length - 1; i >= 0; i--) {
+                let p = particles[i];
+
+                p.x += p.speedX;
+                p.y += p.speedY;
+                p.life--;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255,255,220,${p.life / 60})`;
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = '#fff';
+                ctx.fill();
+
+                if (p.life <= 0) {
+                    particles.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+        window.addEventListener('scroll', () => {
+
+            let scrollTop =
+                document.documentElement.scrollTop;
+
+            let scrollHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+
+            let progress =
+                (scrollTop / scrollHeight) * 100;
+
+            document.getElementById('progressBar')
+                .style.width = progress + "%";
+
+        });
+
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <!-- <script id="dsq-count-scr" src="//wanderwithaman-vercel-app.disqus.com/count.js" async></script> -->
+</body>
+
+</html>
