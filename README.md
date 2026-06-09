@@ -16,7 +16,7 @@ From spiritual journeys to coastal escapes, each story captures the emotions, me
 
 - 🛕 Ujjain Mahakaleshwar Jyotirlinga
 - 🌊 Visakhapatnam (Vizag)
-- 🕉️ Omkareshwar Jyotirlinga
+- 🕉️ Omkareshwar Jyotirlinga *(Upcoming)*
 - 🚩 Salasar Balaji *(Upcoming)*
 - 🌴 Kerala Backwaters *(Upcoming)*
 
