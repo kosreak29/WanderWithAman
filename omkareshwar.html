@@ -406,6 +406,7 @@
             transform: translateY(-5px);
             background: #d8a84b;
         }
+
         .comments-section {
             max-width: 900px;
             margin: 80px auto;
@@ -416,6 +417,38 @@
             text-align: center;
             color: #C4953A;
             margin-bottom: 30px;
+        }
+
+        /* Mobile */
+        @media (max-width:768px) {
+            .hero {
+                min-height: 80vh;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .section {
+                padding: 118px 0;
+            }
+
+        }
+
+        /* Small Mobile */
+        @media (max-width:480px) {
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: .9rem;
+            }
         }
     </style>
 </head>
@@ -515,28 +548,28 @@
     </div>
     <section class="comments-section">
 
-            <h2>Share Your Thoughts</h2>
+        <h2>Share Your Thoughts</h2>
 
-            <!-- Giscus Code Here -->
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;
-                    this.page.identifier = window.location.pathname;
-                };
+        <!-- Giscus Code Here -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = window.location.href;
+                this.page.identifier = window.location.pathname;
+            };
 
-                (function () {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
+            (function () {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
 
-            <noscript>
-                Please enable JavaScript to view the comments powered by Disqus.
-            </noscript>
-        </section>
+        <noscript>
+            Please enable JavaScript to view the comments powered by Disqus.
+        </noscript>
+    </section>
     <div class="footer">
         <p>© 2025 Wander With Aman. All rights reserved.</p>
         <p>Chapter 03: The River That Calls Back</p>
