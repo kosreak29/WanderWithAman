@@ -1125,7 +1125,7 @@
       }
     }
 
-    .comments-section {
+    /* .comments-section {
       max-width: 900px;
       margin: 80px auto;
       padding: 20px;
@@ -1135,7 +1135,7 @@
       text-align: center;
       color: #C4953A;
       margin-bottom: 30px;
-    }
+    } */
 
     /* FOOTER */
     footer {
@@ -1370,8 +1370,8 @@
 
     .about-badge {
       position: absolute;
-      bottom: 5px;
-      left: 210px;
+      bottom: 20px;
+      left: 20px;
 
       background: rgba(0, 0, 0, .65);
       backdrop-filter: blur(12px);
@@ -1493,6 +1493,9 @@
         padding: 118px 0;
       }
 
+      .memory-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Small Mobile */
@@ -1522,6 +1525,65 @@
       width: 100%;
       height: 100%;
       border: none;
+    }
+
+    .memories-section {
+      background: var(--bg2);
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .memory-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      height: 420px;
+      cursor: pointer;
+    }
+
+    .memory-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease;
+    }
+
+    .memory-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .memory-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 30px;
+
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, .9),
+          rgba(0, 0, 0, .2),
+          transparent);
+    }
+
+    .memory-content span {
+      color: #C4953A;
+      font-size: .75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .memory-content h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 10px 0;
+      font-family: var(--serif);
+    }
+
+    .memory-content p {
+      color: #d0d0d0;
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -1900,6 +1962,10 @@
 
         <div class="about-info">
 
+          <h3>About Aman</h3>
+
+          <h2>The Story Behind The Journey</h2>
+
           <p>
             Every destination carries a story waiting to be heard.
             What began as a simple desire to travel slowly evolved
@@ -1954,47 +2020,59 @@
     </div>
 
   </section>
-  <section class="stats">
+  <section class="section memories-section">
 
     <div class="container">
 
-      <h2 class="sh-title">
-        Travel Route
-      </h2>
+      <div class="section-head">
+        <div class="sh-label">06 — WALL OF MEMORIES</div>
+        <h2 class="sh-title">The Moments That Stayed</h2>
+      </div>
 
-      <div style="
-  display:flex;
-  justify-content:center;
-  gap: 100px;
-  font-size: 20px;
-  font-family: georgia, serif;
-  color:#C4953A;
-">
+      <div class="memory-grid">
 
-        <div class="travel-timeline">
-
-          <div class="route-stop">
-            <div class="route-dot"></div>
-            <h4>Durg</h4>
-            <span>Chhattisgarh</span>
+        <div class="memory-card">
+          <img src="Images/Ujjain/Ujjain Hero Image.webp" alt="">
+          <div class="memory-content">
+            <span>Ujjain • Chapter 01</span>
+            <h3>First Darshan</h3>
+            <p>
+              Standing before Mahakal for the first time felt surreal.
+            </p>
           </div>
+        </div>
 
-          <div class="route-line"></div>
-
-          <div class="route-stop">
-            <div class="route-dot"></div>
-            <h4>Vizag</h4>
-            <span>Andhra Pradesh</span>
+        <div class="memory-card">
+          <img src="Images/Vizag/Story-vizag1.webp" alt="">
+          <div class="memory-content">
+            <span>Vizag • Chapter 02</span>
+            <h3>The Rain Arrived</h3>
+            <p>
+              I wished for rain. RK Beach answered.
+            </p>
           </div>
+        </div>
 
-          <div class="route-line"></div>
-
-          <div class="route-stop">
-            <div class="route-dot"></div>
-            <h4>Araku Valley</h4>
-            <span>Andhra Pradesh</span>
+        <div class="memory-card">
+          <img src="Images/Vizag/Araku_valley.webp" alt="">
+          <div class="memory-content">
+            <span>Araku Valley</span>
+            <h3>The Scenic Route</h3>
+            <p>
+              Every turn revealed another unforgettable view.
+            </p>
           </div>
+        </div>
 
+        <div class="memory-card">
+          <img src="Images/Omkareshwar/Om.webp" alt="">
+          <div class="memory-content">
+            <span>Coming Soon</span>
+            <h3>Next Chapter</h3>
+            <p>
+              Omkareshwar, Salasar Balaji and Kerala await.
+            </p>
+          </div>
         </div>
 
       </div>
@@ -2007,7 +2085,7 @@
     <div class="container">
       <div class="nl-inner">
         <div class="reveal">
-          <div class="sh-label">Stay Inspired</div>
+          <div class="sh-label">07 Stay Inspired</div>
           <h2 class="nl-head">New stories, every fortnight.</h2>
           <p class="nl-text">No spam — just travel tales, hidden trails, quiet dawns, and the kind of stories that make
             you want to leave again.</p>
@@ -2034,7 +2112,7 @@
     <div class="container">
 
       <div class="section-head">
-        <div class="sh-label">06 — Gallery</div>
+        <div class="sh-label">08 — Gallery</div>
         <h2 class="sh-title">Captured Moments</h2>
       </div>
 
@@ -2062,30 +2140,7 @@
       </div>
 
     </div>
-    <section class="comments-section">
 
-      <h2>Share Your Thoughts</h2>
-
-      <!-- Giscus Code Here -->
-      <div id="disqus_thread"></div>
-      <script>
-        var disqus_config = function () {
-          this.page.url = window.location.href;
-          this.page.identifier = window.location.pathname;
-        };
-
-        (function () {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-
-      <noscript>
-        Please enable JavaScript to view the comments powered by Disqus.
-      </noscript>
-    </section>
   </section>
   <!-- FOOTER -->
   <footer>
@@ -2225,11 +2280,6 @@
 
     });
   </script>
-  <script src="https://giscus.app/client.js" data-repo="kosreak29/WanderWithAman" data-repo-id="R_kgDOS0g1ag"
-    data-category="General" data-category-id="DIC_kwDOS0g1as4C-y3x" data-mapping="pathname" data-strict="0"
-    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en"
-    crossorigin="anonymous" async>
-    </script>
   <script>
     const cards = document.querySelectorAll('.future-card');
 
