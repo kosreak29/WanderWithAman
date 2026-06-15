@@ -1079,21 +1079,50 @@
     }
 
     .photo-wall {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 80px 0;
     }
 
-    .photo-wall img {
-      height: 320px;
-      border-radius: 15px;
+    .photo-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+
+      animation: photoScroll 35s linear infinite;
+    }
+
+    .photo-wall:hover .photo-track {
+      animation-play-state: paused;
+    }
+
+    .photo-track img {
+      width: 320px;
+      height: 420px;
       object-fit: cover;
-      transition: .4s;
-      cursor: pointer;
+
+      border-radius: 18px;
+
+      transition: all .4s ease;
     }
 
-    .photo-wall img:hover {
-      transform: scale(1.03);
+    .photo-track img:hover {
+      transform: scale(1.08);
+      z-index: 10;
+
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+    }
+
+    @keyframes photoScroll {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .comments-section {
@@ -1946,12 +1975,24 @@
 
       <div class="photo-wall">
 
-        <img src="Images/Ujjain/8.jpg" alt="Gallery Image 1" style="object-position: center;" loading="lazy">
-        <img src="Images/Vizag/fish-port.webp" alt="Gallery Image 2" loading="lazy">
-        <img src="Images/Ujjain/04.webp" alt="Gallery Image 3" style="object-position: top;" loading="lazy">
-        <img src="Images/Ujjain/05.webp" alt="Gallery Image 4" style="object-position: center;" loading="lazy">
-        <img src="Images/Ujjain/022.webp" alt="Gallery Image 5" loading="lazy">
-        <img src="Images/Ujjain/07.webp" alt="Gallery Image 6" loading="lazy">
+        <div class="photo-track">
+
+          <img src="Images/Ujjain/8.jpg" alt="Gallery Image 1" style="object-position:center;" loading="lazy">
+          <img src="Images/Vizag/fish-port.webp" alt="Gallery Image 2" loading="lazy">
+          <img src="Images/Ujjain/04.webp" alt="Gallery Image 3" style="object-position:top;" loading="lazy">
+          <img src="Images/Ujjain/05.webp" alt="Gallery Image 4" style="object-position:center;" loading="lazy">
+          <img src="Images/Ujjain/022.webp" alt="Gallery Image 5" loading="lazy">
+          <img src="Images/Ujjain/07.webp" alt="Gallery Image 6" loading="lazy">
+
+          <!-- Duplicate for smooth infinite scroll -->
+          <img src="Images/Ujjain/8.jpg" alt="" loading="lazy">
+          <img src="Images/Vizag/fish-port.webp" alt="" loading="lazy">
+          <img src="Images/Ujjain/04.webp" alt="" loading="lazy">
+          <img src="Images/Ujjain/05.webp" alt="" loading="lazy">
+          <img src="Images/Ujjain/022.webp" alt="" loading="lazy">
+          <img src="Images/Ujjain/07.webp" alt="" loading="lazy">
+
+        </div>
 
       </div>
 
