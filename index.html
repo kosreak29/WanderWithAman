@@ -1345,30 +1345,98 @@
 
     }
 
-    .about-grid {
+    /* About Section */
+    .about-story {
       display: grid;
-      grid-template-columns: 55% 45%;
-      gap: 50px;
+      grid-template-columns: 500px 1fr;
+      gap: 80px;
       align-items: center;
     }
 
-    .about-grid img {
+    .about-card {
+      position: relative;
+    }
+
+    .about-card img {
+      width: 100%;
+      border-radius: 24px;
       transition: .5s;
+      border: 1px solid rgba(196, 149, 58, .15);
     }
 
-    .about-grid img:hover {
-      transform: scale(1.02);
+    .about-card:hover img {
+      transform: scale(1.03);
     }
 
-    .about-image img {
-      width: 80%;
-      max-width: 600px;
+    .about-badge {
+      position: absolute;
+      bottom: 5px;
+      left: 210px;
+
+      background: rgba(0, 0, 0, .65);
+      backdrop-filter: blur(12px);
+
+      padding: 14px 18px;
+      border-radius: 12px;
+
+      border: 1px solid rgba(196, 149, 58, .2);
     }
 
-    .about-content {
-      color: #d6d6d6;
-      font-size: 1.05rem;
+    .about-badge h4 {
+      color: #C4953A;
+      margin-bottom: 4px;
+    }
+
+    .about-badge p {
+      color: #ddd;
+      font-size: .75rem;
+    }
+
+    .about-info h3 {
+      color: #C4953A;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .8rem;
+      margin-bottom: 20px;
+    }
+
+    .about-info h2 {
+      font-family: var(--serif);
+      font-style: italic;
+      color: #fff;
+      font-size: 4rem;
+      margin-bottom: 25px;
+    }
+
+    .about-info p {
+      color: #b7b7b7;
       line-height: 2;
+      margin-bottom: 35px;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-stat h4 {
+      color: #C4953A;
+      font-size: 2rem;
+    }
+
+    .about-stat span {
+      color: #888;
+      font-size: .85rem;
+    }
+
+    .about-card::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(rgba(196, 149, 58, .15),
+          transparent 70%);
+      z-index: -1;
     }
 
     .back-to-top {
@@ -1817,59 +1885,60 @@
       </div>
 
       <!-- ABOUT GRID -->
-      <div class="about-grid">
+      <div class="about-story">
 
-        <div class="about-image">
-          <img src="Images/WanderWithAman/About-image.webp" alt="About Aman" loading="lazy">
+        <div class="about-card">
+
+          <img src="Images/WanderWithAman/About-image.webp" alt="Aman Travel Story">
+
+          <div class="about-badge">
+            <h4>📍 Durg, Chhattisgarh</h4>
+            <p>Explorer • Storyteller • Solo Traveller</p>
+          </div>
+
         </div>
 
-        <div class="about-content">
+        <div class="about-info">
+
+          <h3>About Aman</h3>
+
+          <h2>The Story Behind The Journey</h2>
+
           <p>
-            I am Aman, an explorer and storyteller born and raised in the city of Durg, Chhattisgarh. Now 26, I have set
-            my sights on a lifelong mission: to explore the vast, diverse landscape of India.
-
-            I believe that every destination carries a unique legacy, and every journey leaves behind a memory meant to
-            be cherished. Whether traveling solo or venturing out with a group, my goal is to capture every fleeting
-            moment and turn it into a lasting memory. From the rhythmic clatter of trains across the plains to the
-            silence of majestic peaks and the hidden serenity of our coastlines, I translate these experiences into
-            visual and written stories.
-
-            For as long as I live, I want to keep moving. My journey is defined by the thrill of discovering new cities,
-            savoring local flavors, meeting new people, and embracing every unexpected adventure that comes my way. I am
-            here to document the untold chapters of our country, one journey at a time. Join me, fellow wanderers, as we
-            build a collection of memories that last a lifetime.
+            Every destination carries a story waiting to be heard.
+            What began as a simple desire to travel slowly evolved
+            into a lifelong mission to document India through
+            photography, words, and unforgettable experiences.
           </p>
+
+          <p>
+            From spiritual cities like Ujjain to the coastlines of
+            Vizag, every journey leaves behind a lesson, a memory,
+            and a new perspective on life.
+          </p>
+
+          <div class="about-stats">
+
+            <div class="about-stat">
+              <h4>2+</h4>
+              <span>Journeys</span>
+            </div>
+
+            <div class="about-stat">
+              <h4>1669+</h4>
+              <span>KM Travelled</span>
+            </div>
+
+            <div class="about-stat">
+              <h4>1000+</h4>
+              <span>Photos Captured</span>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
-      <!-- <div class="about-grid">
-
-        <img src="Images/Story.webp" style="
-          width:106%;
-          border-radius:19px;
-        ">
-
-        <div>
-          <p class="sh-desc">
-            I am Aman, an explorer and storyteller born and raised in the city of Durg, Chhattisgarh. Now 26, I have set
-            my sights on a lifelong mission: to explore the vast, diverse landscape of India.
-
-            I believe that every destination carries a unique legacy, and every journey leaves behind a memory meant to
-            be cherished. Whether traveling solo or venturing out with a group, my goal is to capture every fleeting
-            moment and turn it into a lasting memory. From the rhythmic clatter of trains across the plains to the
-            silence of majestic peaks and the hidden serenity of our coastlines, I translate these experiences into
-            visual and written stories.
-
-            For as long as I live, I want to keep moving. My journey is defined by the thrill of discovering new cities,
-            savoring local flavors, meeting new people, and embracing every unexpected adventure that comes my way. I am
-            here to document the untold chapters of our country, one journey at a time. Join me, fellow wanderers, as we
-            build a collection of memories that last a lifetime.
-          </p>
-        </div>
-
-      </div> -->
-
-    </div>
   </section>
   <section class="section">
 
