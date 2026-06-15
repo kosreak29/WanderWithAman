@@ -747,6 +747,9 @@
       background: rgba(255, 255, 255, .03);
       border: 1px solid rgba(196, 149, 58, .15);
       backdrop-filter: blur(10px);
+      position: relative;
+      transition: transform 0.25s ease;
+      cursor: pointer;
     }
 
     .future-card span {
@@ -1406,22 +1409,23 @@
         font-size: .9rem;
       }
     }
-    .video-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 1300px;
-        aspect-ratio: 16/9;
-        margin: 50px auto;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
-      }
 
-      .video-wrapper iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1300px;
+      aspect-ratio: 16/9;
+      margin: 50px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 
@@ -1599,7 +1603,7 @@
               <span>·</span>
               <span>8 min read</span>
             </div>
-            <a href="/ujjain-mahakal" class="j-readmore">
+            <a href="ujjain-mahakal.html" class="j-readmore">
               Read Story
               <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -1622,7 +1626,7 @@
               <span>·</span>
               <span>12 min read</span>
             </div>
-            <a href="vizag-vishakhapatnam" class="j-readmore">
+            <a href="vizag-vishakhapatnam.html" class="j-readmore">
               Read Story
               <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -1645,7 +1649,7 @@
               <span>·</span>
               <span>8 min read</span>
             </div>
-            <a href="/omkareshwar" class="j-readmore">
+            <a href="omkareshwar.html" class="j-readmore">
               Read Story
               <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -1669,7 +1673,7 @@
               <span>·</span>
               <span>8 min read</span>
             </div>
-            <a href="/salasar-balaji" class="j-readmore">
+            <a href="journey/salasar-balaji" class="j-readmore">
               Read Story
               <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -1694,7 +1698,7 @@
               <span>·</span>
               <span>8 min read</span>
             </div>
-            <a href="/kerala-backwaters" class="j-readmore">
+            <a href="kerala-backwaters.html" class="j-readmore">
               Read Story
               <svg width="13" height="10" viewBox="0 0 14 10" fill="none">
                 <path d="M1 5h12M8 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -2120,7 +2124,23 @@
     data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en"
     crossorigin="anonymous" async>
     </script>
+  <script>
+    const cards = document.querySelectorAll('.future-card');
 
+    cards.forEach(card => {
+
+      card.addEventListener('mouseenter', () => {
+
+        const x = Math.random() * 120 - 60;
+        const y = Math.random() * 120 - 60;
+
+        card.style.transform =
+          `translate(${x}px, ${y}px)`;
+
+      });
+
+    });
+  </script>
 </body>
 
 </html>
