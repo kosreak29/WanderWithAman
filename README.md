@@ -43,7 +43,7 @@ From spiritual journeys to coastal escapes, each story captures the emotions, me
 - JavaScript
 - Vercel
 - Web3Forms
-
+- Giscus
 ---
 
 ## 📸 Travel Philosophy
@@ -54,7 +54,7 @@ From spiritual journeys to coastal escapes, each story captures the emotions, me
 
 ## 🌐 Live Website
 
-[Visit Website](https://wanderwithaman.vercel.app)
+https://wanderwithaman.vercel.app
 
 ---
 
