@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta name="google-site-verification" content="googleec222c5e2a61bf57.html"/>
+  <meta name="google-site-verification" content="ec222c5e2a61bf57" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
@@ -34,7 +34,7 @@
   <link rel="canonical" href="https://wanderwithaman.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/png" href="Images/WanderWithAman/Favicon.png">
+  <link rel="apple-touch-icon" type="image/png" href="Images/WanderWithAman/Favicon.png" type="image/png">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500&display=swap"
     rel="stylesheet">
@@ -43,7 +43,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "TravelBlog",
     "name": "Wander With Aman",
     "description": "A personal travel journal documenting spiritual journeys across India",
     "url": "https://wanderwithaman.vercel.app/",
@@ -102,13 +102,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
     a {
       color: inherit;
       text-decoration: none;
@@ -120,7 +113,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 9999;
-      opacity: .038;
+      opacity: 0.02;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size: 200px 200px;
     }
@@ -436,7 +429,7 @@
       color: white;
       font-weight: 400;
       margin-top: 4px;
-      border: 2px;
+      border: 2px solid transparent;
     }
 
     .hero-status {
@@ -449,6 +442,11 @@
       font-size: .7rem;
       letter-spacing: .15em;
       text-transform: uppercase;
+    }
+
+    .hero-status {
+      max-width: 100%;
+      word-wrap: break-word;
     }
 
     @keyframes spin {
@@ -566,7 +564,6 @@
 
     img {
       max-width: 100%;
-      height: auto;
       display: block;
     }
 
@@ -764,12 +761,12 @@
       border-color: #C4953A;
     }
 
-    .future-card span {
+    /* .future-card span {
       color: #C4953A;
       font-size: .85rem;
       letter-spacing: .08em;
       text-transform: uppercase;
-    }
+    } */
 
     /* JOURNAL */
     .journal {
@@ -1371,8 +1368,8 @@
     .about-badge {
       position: absolute;
       bottom: 4px;
-      left: 250px;
-
+      left: 50%;
+      transform: translateX(-50%);
       background: rgba(0, 0, 0, .65);
       backdrop-filter: blur(12px);
 
@@ -1539,6 +1536,12 @@
       }
     }
 
+    @media(max-width:768px) {
+      .about-story {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Small Mobile */
     @media (max-width:480px) {
 
@@ -1634,6 +1637,11 @@
       color: #d0d0d0;
       line-height: 1.7;
     }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
   </style>
 </head>
 
@@ -1643,11 +1651,13 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">W · A</a>
+    <a href="/" class="nav-logo">W · A</a>
     <ul class="nav-links">
       <li><a href="#destinations">Destinations</a></li>
       <li><a href="#journal">Journal</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="javascript:void(0)" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          About
+        </a></li>
       <li><a href="#newsletter">Contact</a></li>
     </ul>
     <a href="#destinations" class="nav-cta">Explore</a>
@@ -1799,7 +1809,7 @@
         <!-- Featured -->
         <article class="j-card j-card--feat reveal">
           <div class="j-img">
-            <img src="Images/Ujjain/Ujjain Hero Image.webp" alt="Ujjain Mahakaleshwar Jyotirling" loading="lazy">
+            <img src="Images/Ujjain/Ujjain Hero Image.webp" alt="Ujjain Mahakal Temple" loading="lazy">
           </div>
           <div class="j-body">
             <span class="j-tag">Ujjain Mahakaleshwar Jyotirling · Madhya Pradesh</span>
@@ -1987,7 +1997,8 @@
       </div>
     </div>
   </section> -->
-  <section class="section">
+  <section class="section" id="about">
+
     <div class="container">
 
       <div class="section-head">
@@ -2144,18 +2155,36 @@
             you want to leave again.</p>
         </div>
         <form id="form" action="https://api.web3forms.com/submit" method="POST" class="nl-form reveal d1">
+
+          <!-- Web3Forms Access Key -->
           <input type="hidden" name="access_key" value="14ddcf8f-a0e5-4d8c-91b5-b2ee3dcfb542">
+
+          <!-- Email Subject -->
           <input type="hidden" name="subject" value="New Wander With Aman Subscriber">
-          <input type="checkbox" name="botcheck" style="display:none">
+
+          <!-- Website Name -->
+          <input type="hidden" name="from_name" value="Wander With Aman">
+
+          <!-- Redirect After Submit -->
+          <input type="hidden" name="redirect" value="https://wanderwithaman.vercel.app/">
+
+          <!-- Honeypot Anti Spam -->
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <!-- User Name -->
           <input type="text" name="name" placeholder="Enter your name" required>
+
+          <!-- User Email -->
           <input type="email" name="email" placeholder="Enter your email" required>
 
           <button type="submit">
             Subscribe To Journey
           </button>
+
           <p class="nl-note">
             Join the journey and receive future travel stories directly in your inbox.
           </p>
+
         </form>
       </div>
     </div>
@@ -2394,6 +2423,16 @@
 
     counters.forEach(counter => {
       observer.observe(counter);
+    });
+  </script>
+  <script>
+    document.getElementById("form").addEventListener("submit", function () {
+
+      const btn = this.querySelector("button");
+
+      btn.innerHTML = "Subscribing...";
+      btn.disabled = true;
+
     });
   </script>
 </body>
