@@ -362,6 +362,53 @@
             height: 100%;
             border: none;
         }
+
+        .photo-wall {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin: 80px 0;
+        }
+
+        .photo-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+
+            animation: photoScroll 35s linear infinite;
+        }
+
+        .photo-wall:hover .photo-track {
+            animation-play-state: paused;
+        }
+
+        .photo-track img {
+            width: 320px;
+            height: 420px;
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            transition: all .4s ease;
+        }
+
+        .photo-track img:hover {
+            transform: scale(1.08);
+            z-index: 10;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+        }
+
+        @keyframes photoScroll {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 
 </head>
@@ -632,6 +679,43 @@
 
         </div>
 
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-head">
+                    <h2 class="sh-title">Captured Moments</h2>
+                </div>
+
+                <div class="photo-wall">
+
+                    <div class="photo-track">
+
+                        <img src="Images/Ujjain/8.jpg" alt="Gallery Image 1" style="object-position:center;"
+                            loading="lazy">
+                        <img src="Images/Ujjain/022.webp" alt="Gallery Image 2" loading="lazy">
+                        <img src="Images/Ujjain/04.webp" alt="Gallery Image 3" style="object-position:top;"
+                            loading="lazy">
+                        <img src="Images/Ujjain/05.webp" alt="Gallery Image 4" style="object-position:center;"
+                            loading="lazy">
+                        <img src="Images/Ujjain/022.webp" alt="Gallery Image 5" loading="lazy">
+                        <img src="Images/Ujjain/07.webp" alt="Gallery Image 6" loading="lazy">
+
+                        <!-- Duplicate for smooth infinite scroll -->
+                        <img src="Images/Ujjain/8.jpg" alt="" loading="lazy">
+                        <img src="Images/Ujjain/022.webp" alt="" loading="lazy">
+                        <img src="Images/Ujjain/04.webp" alt="" loading="lazy">
+                        <img src="Images/Ujjain/05.webp" alt="" loading="lazy">
+                        <img src="Images/Ujjain/022.webp" alt="" loading="lazy">
+                        <img src="Images/Ujjain/07.webp" alt="" loading="lazy">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
         <section class="comments-section">
 
             <h2>Share Your Thoughts</h2>
@@ -656,15 +740,6 @@
                 Please enable JavaScript to view the comments powered by Disqus.
             </noscript>
         </section>
-        <h2>Journey Gallery</h2>
-        <div class="gallery">
-
-            <img src="Images/Ujjain/022.webp" alt="Sacred rituals at Mahakaleshwar temple" width="200" height="400">
-            <img src="Images/Ujjain/07.webp" alt="Pilgrims gathering at Ujjain temple" width="200" height="400">
-            <img src="Images/Ujjain/9.jpg" alt="Evening aarti at Mahakaleshwar temple" width="200" height="400">
-            <img src="Images/Ujjain/Kalbhairav.webp" alt="Kal Bhairav temple in Ujjain" width="200" height="400">
-
-        </div>
         <div class="author-card">
 
             <img src="Images/WanderWithAman/wanderwithaman.jpg">
@@ -689,8 +764,9 @@
             </div>
 
         </div>
+
         <div class="footer">
-            <p>© 2025 Wander With Aman. All rights reserved.</p>
+            <p>© 2026 Wander With Aman. All rights reserved.</p>
             <p>Chapter 01: The Divine Calling — Ujjain</p>
         </div>
     </div>
