@@ -731,43 +731,6 @@
       margin-bottom: 80px;
     }
 
-
-    .future-destinations {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* .future-card {
-      padding: 20px;
-      border-radius: 50px;
-      background: rgba(2, 2, 2, 0.03);
-      border: 1px solid rgba(196, 149, 58, .15);
-      backdrop-filter: blur(10px);
-      position: fixed;
-      transition: transform 0.25s ease;
-      cursor: pointer;
-    } */
-
-    .future-card span {
-      display: block;
-      margin-top: 10px;
-      color: #C4953A;
-      letter-spacing: .08em;
-    }
-
-    /* .future-card:hover {
-      transform: translateY(-6px);
-      border-color: #C4953A;
-    } */
-
-    /* .future-card span {
-      color: #C4953A;
-      font-size: .85rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    } */
-
     /* JOURNAL */
     .journal {
       background: var(--bg);
@@ -786,7 +749,7 @@
       overflow: hidden;
       transition: border-color .3s, transform .4s var(--expo);
     }
-
+    
     .j-card:hover {
       border-color: var(--border2);
       transform: translateY(-5px);
@@ -819,12 +782,12 @@
       transform: scale(1.05);
     }
 
-    .j-body {
+    /* .j-body {
       padding: 28px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
+    } */
 
     .j-card--feat .j-body {
       padding: 42px;
@@ -1751,69 +1714,11 @@
     </div>
   </div>
 
-  <!-- DESTINATIONS -->
-  <section class="destinations section" id="destinations">
-    <div class="destinations-layout">
-
-      <div class="destinations-left">
-
-        <div class="section-head">
-          <div class="sh-label">02 — DESTINATIONS</div>
-          <h2 class="sh-title">Where to Next</h2>
-        </div>
-
-        <p>
-          From the sacred shores of Omkareshwar, where the gentle whispers of the Narmada carry centuries of devotion,
-          to the spiritual energy of Salasar Balaji that echoes through the heart of Rajasthan, and onward to the
-          tranquil emerald backwaters of Kerala—every destination is more than a place on the map; it is a chapter in a
-          journey of discovery.
-        </p>
-        <br>
-        <p>
-          These upcoming adventures are not merely about covering distances, but about embracing stories, cultures,
-          traditions, and the countless moments that make travel meaningful. Along the way, I hope to capture the soul
-          of each destination through photographs, stories, and experiences that inspire curiosity and connection.
-        </p>
-        <br>
-        <p>
-          Join me as I continue exploring the diverse landscapes of India—one sunrise, one train ride, one conversation,
-          and one unforgettable chapter at a time. The road ahead is long, the stories are waiting, and the journey has
-          only just begun.
-        </p>
-
-      </div>
-
-      <!-- <div class="destinations-right">
-
-        <div class="future-destinations">
-
-          <div class="future-card">
-            📍 Omkareshwar
-            <span>Coming Soon</span>
-          </div>
-
-          <div class="future-card">
-            📍 Salasar Balaji
-            <span>Planned</span>
-          </div>
-
-          <div class="future-card">
-            📍 Kerala
-            <span>Dream Route</span>
-          </div>
-
-        </div>
-
-      </div> -->
-
-    </div>
-  </section>
-
   <!-- JOURNAL -->
   <section class="journal section" id="journal">
     <div class="container">
       <div class="section-head reveal">
-        <div class="sh-label">03 — Latest Stories</div>
+        <div class="sh-label">02 — Latest Stories</div>
         <h2 class="sh-title">From the Journal</h2>
       </div>
       <div class="journal-grid">
@@ -1864,7 +1769,7 @@
             </a>
           </div>
         </article>
-        <article class="j-card j-card--feat reveal">
+        <!-- <article class="j-card j-card--feat reveal">
           <div class="j-img">
             <img src="Images/Omkareshwar/Om.webp" alt="Omkareshwar Narmada River" loading="lazy">
           </div>
@@ -1886,8 +1791,8 @@
               </svg>
             </a>
           </div>
-        </article>
-        <!-- Chapter 04 - Salasar Balaji -->
+        </article> -->
+        <!-- Chapter 04 - Salasar Balaji
         <article class="j-card reveal d3">
           <div class="j-img">
             <img src="Images/Balaji/Balaji.webp" alt="Salasar Balaji Temple Rajasthan" loading="lazy">
@@ -1910,9 +1815,9 @@
               </svg>
             </a>
           </div>
-        </article>
+        </article> -->
 
-        <!-- Chapter 05 - Kerala Backwaters -->
+        <!-- Chapter 05 - Kerala Backwaters
         <article class="j-card reveal d4">
           <div class="j-img">
             <img src="Images/Kerala/Kerala.webp" alt="Kerala Backwaters Houseboat" loading="lazy">
@@ -1935,7 +1840,7 @@
               </svg>
             </a>
           </div>
-        </article>
+        </article> -->
 
         <!-- Smaller cards -->
         <!-- <article class="j-card reveal d1">
@@ -1982,6 +1887,40 @@
           </div>
         </article> -->
       </div>
+    </div>
+  </section>
+  <!-- DESTINATIONS -->
+  <section class="destinations section" id="destinations">
+    <div class="destinations-layout">
+
+      <div class="destinations-left">
+
+        <div class="section-head">
+          <div class="sh-label">03 — DESTINATIONS</div>
+          <h2 class="sh-title">Where to Next</h2>
+        </div>
+
+        <p>
+          From the sacred shores of Omkareshwar, where the gentle whispers of the Narmada carry centuries of devotion,
+          to the spiritual energy of Salasar Balaji that echoes through the heart of Rajasthan, and onward to the
+          tranquil emerald backwaters of Kerala—every destination is more than a place on the map; it is a chapter in a
+          journey of discovery.
+        </p>
+        <br>
+        <p>
+          These upcoming adventures are not merely about covering distances, but about embracing stories, cultures,
+          traditions, and the countless moments that make travel meaningful. Along the way, I hope to capture the soul
+          of each destination through photographs, stories, and experiences that inspire curiosity and connection.
+        </p>
+        <br>
+        <p>
+          Join me as I continue exploring the diverse landscapes of India—one sunrise, one train ride, one conversation,
+          and one unforgettable chapter at a time. The road ahead is long, the stories are waiting, and the journey has
+          only just begun.
+        </p>
+
+      </div>
+
     </div>
   </section>
 
@@ -2077,30 +2016,13 @@
 
       </div>
   </section>
-  <section class="section">
 
-    <div class="container">
-
-      <div class="section-head">
-        <div class="sh-label">05 — Featured Reel</div>
-        <h2 class="sh-title">Travel Cinematic</h2>
-      </div>
-
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/77jsp8_xYXo?si=IMkDvZBUv2-ol5om" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </div>
-
-  </section>
   <section class="section memories-section">
 
     <div class="container">
 
       <div class="section-head">
-        <div class="sh-label">06 — WALL OF MEMORIES</div>
+        <div class="sh-label">05 — WALL OF MEMORIES</div>
         <h2 class="sh-title">The Moments That Stayed</h2>
       </div>
 
@@ -2156,6 +2078,24 @@
       </div>
     </div>
 
+    </div>
+
+  </section>
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="sh-label">06 — Featured Reel</div>
+        <h2 class="sh-title">Travel Cinematic</h2>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/77jsp8_xYXo?si=IMkDvZBUv2-ol5om" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
 
   </section>
@@ -2241,6 +2181,7 @@
     </div>
 
   </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -2379,24 +2320,7 @@
 
     });
   </script>
-  <script>
-    const cards = document.querySelectorAll('.future-card');
 
-    cards.forEach(card => {
-
-      card.addEventListener('mouseenter', () => {
-
-        const x = Math.random() * 120 - 60;
-        const y = Math.random() * 120 - 60;
-
-        card.style.transform =
-          `translate(${x}px, ${y}px)`;
-
-      });
-
-    });
-
-  </script>
   <script>
     const counters = document.querySelectorAll('.counter');
 
@@ -2452,6 +2376,7 @@
 
     });
   </script>
+
 </body>
 
 </html>
