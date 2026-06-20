@@ -421,6 +421,74 @@
                 transform: translateX(-50%);
             }
         }
+
+        .next-story {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 80px 40px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(196, 149, 58, 0.6);
+            border-radius: 30px;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .next-story span {
+            display: block;
+            color: #C4953A;
+            font-size: 0.95rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .next-story h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: #fff;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .next-story p {
+            color: #d8c6a3;
+            font-size: 1.1rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .next-story-link {
+            display: inline-block;
+            padding: 16px 42px;
+            background: #C4953A;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all .3s ease;
+        }
+
+        .next-story-link:hover {
+            transform: translateY(-3px);
+            background: #d8a84b;
+        }
+
+        @media (max-width:768px) {
+
+            .next-story {
+                padding: 60px 25px;
+                margin: 60px 20px;
+            }
+
+            .next-story h2 {
+                font-size: 2.3rem;
+            }
+
+        }
     </style>
     <!-- Blog Schema Start -->
     <script type="application/ld+json">
@@ -442,7 +510,7 @@
  ]
 }
 </script>
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"BlogPosting",
@@ -749,8 +817,8 @@
                         <img src="Images/Ujjain/022.webp" alt="Evening Darshan at Mahakal" loading="lazy">
                         <img src="Images/Ujjain/04.webp" alt="Spiritual Journey in Ujjain" style="object-position:top;"
                             loading="lazy">
-                        <img src="Images/Ujjain/05.webp" alt="Temple Architecture Ujjain" style="object-position:center;"
-                            loading="lazy">
+                        <img src="Images/Ujjain/05.webp" alt="Temple Architecture Ujjain"
+                            style="object-position:center;" loading="lazy">
                         <img src="Images/Ujjain/022.webp" alt="First Solo Trip" loading="lazy">
                         <img src="Images/Ujjain/07.webp" alt="Ujjain Darshan" loading="lazy">
 
@@ -774,8 +842,9 @@
             <span>Next Journey</span>
 
             <h2>Vizag - The City Of Destiny</h2>
+
             <h7>Vishakhapatnam, Andhra Pradesh</h7>
-            <br>
+
             <a href="vizag-vishakhapatnam.html" class="next-story-link">
                 Continue The Journey →
             </a>
@@ -805,7 +874,7 @@
                 Please enable JavaScript to view the comments powered by Disqus.
             </noscript>
         </section>
-        
+
         <div class="author-card">
 
             <img src="Images/WanderWithAman/wanderwithaman.jpg" alt="Aman Kosre - Wander With Aman">
