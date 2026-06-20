@@ -11,4 +11,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://wanderwithaman.com/sitemap.xml
+Sitemap: https://wanderwithaman.vercel.app/sitemap.xml
