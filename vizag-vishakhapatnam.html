@@ -28,7 +28,7 @@
     <title>Chapter 02: The Ocean Answered — Visakhapatnam Vizag Travel Story</title>
     <link rel="icon" type="image/png" href="Images/WanderWithAman/Favicon.png">
     <link rel="canonical" href="https://wanderwithaman.vercel.app/vizag-vishakhapatnam.html">
-
+    <link rel="preload" as="image" href="Images/Vizag/Story-vizag1.webp">
     <style>
         body {
             background: rgba(11, 9, 7, 0.93);
@@ -1210,6 +1210,11 @@
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 3000) {
+                    loadDisqus();
+                }
+            }, { once: true });
         </script>
 
         <noscript>
