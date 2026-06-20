@@ -24,8 +24,8 @@
     <meta name="twitter:creator" content="@aman_kosre14_14">
 
     <title>Chapter 01: The Divine Calling — Mahakaleshwar Solo Journey</title>
-    <link rel="canonical" href="https://wanderwithaman.com/ujjain-mahakal.html">
     <link rel="icon" type="image/png" href="Images/WanderWithAman/Favicon.png">
+    <link rel="canonical" href="https://wanderwithaman.vercel.app/ujjain-mahakal.html">
 
     <style>
         body {
@@ -34,6 +34,16 @@
             font-family: georgia, serif, 'Times New Roman', Times, serif;
             margin: 0;
 
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: #C4953A;
+            z-index: 99999;
         }
 
         #particles {
@@ -400,12 +410,12 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
         }
 
-        .next-story-link{
+        .next-story-link {
             display: inline-block;
             margin-top: 20px;
             padding: 12px 30px;
             background: #C4953A;
-            color: #111;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 30px;
             transition: .3s ease;
@@ -422,7 +432,34 @@
             }
         }
     </style>
-
+    <!-- Blog Schema Start -->
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"Chapter 01: The Divine Calling",
+  "description":"My first solo trip to Ujjain — a spiritual journey to Mahakaleshwar Jyotirlinga where I discovered myself.",
+  "image":"https://wanderwithaman.vercel.app/Images/Ujjain/Jyotirlinga11.jpg",
+  "author":{
+    "@type":"Person",
+    "name":"Aman Kosre"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"Wander With Aman",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://wanderwithaman.vercel.app/Images/WanderWithAman/Favicon.png"
+    }
+  },
+  "datePublished":"2025-03-01",
+  "dateModified":"2025-03-01",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://wanderwithaman.vercel.app/ujjain-mahakal.html"
+  }
+}
+</script>
 </head>
 
 <body id="top">
@@ -461,7 +498,7 @@
         </div>
 
         <div class="info-card">
-            ⏱ 8 Min Read
+            ⏱ <span id="read-time"></span>
         </div>
         <div class="trip-badge">
             🚩 Solo Travel • Spiritual Journey • Self Discovery
@@ -799,6 +836,7 @@
     <button class="back-to-top" id="backToTop">
         ⬆
     </button>
+
     <script>
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
@@ -887,6 +925,17 @@
                 behavior: 'smooth'
             });
         });
+        const text =
+            document.querySelector(".story").innerText;
+
+        const words =
+            text.trim().split(/\s+/).length;
+
+        const minutes =
+            Math.ceil(words / 200);
+
+        document.getElementById("read-time")
+            .textContent = `${minutes} Min Read`;
     </script>
 
     <!-- <script id="dsq-count-scr" src="//wanderwithaman-vercel-app.disqus.com/count.js" async></script> -->
