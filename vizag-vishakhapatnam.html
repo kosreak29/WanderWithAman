@@ -580,6 +580,15 @@
             .article-content h3 {
                 font-size: 1.1rem;
             }
+
+            .next-story {
+                padding: 60px 25px;
+                margin: 60px 20px;
+            }
+
+            .next-story h2 {
+                font-size: 2.3rem;
+            }
         }
 
         .back-to-top {
@@ -626,15 +635,62 @@
             border: none;
         }
 
+        .next-story {
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 80px 40px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(196, 149, 58, 0.6);
+            border-radius: 30px;
+
+            backdrop-filter: blur(10px);
+        }
+
+        .next-story span {
+            display: block;
+            color: #C4953A;
+            font-size: 0.95rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .next-story h2 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: #fff;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .next-story p {
+            color: #d8c6a3;
+            font-size: 1.1rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
         .next-story-link {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
+            padding: 16px 42px;
+
             background: #C4953A;
-            color: #ffffff;
+            color: #fff;
+
             text-decoration: none;
-            border-radius: 30px;
-            transition: .3s ease;
+            border-radius: 50px;
+
+            font-size: 1rem;
+            transition: all .3s ease;
+        }
+
+        .next-story-link:hover {
+            transform: translateY(-3px);
+            background: #d8a84b;
         }
     </style>
     <script type="application/ld+json">
@@ -1128,9 +1184,10 @@
         <span>Next Journey Coming Soon</span>
 
         <h2>Omkareshwar Jyotirlinga</h2>
+
         <p>Madhya Pradesh</p>
-        <br>
-        <a href="omkareshwar.html" class="next-story-link">
+
+        <a href="" class="next-story-link">
             Continue The Journey →
         </a>
 
