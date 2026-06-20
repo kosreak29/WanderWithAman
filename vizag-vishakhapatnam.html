@@ -319,6 +319,18 @@
             text-transform: uppercase;
         }
 
+        #read-time-hero {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            z-index: 999;
+            color: #C4953A;
+            background: rgba(0, 0, 0, .5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: .85rem;
+        }
+
         .scroll-indicator {
             text-align: center;
             padding: 20px;
@@ -545,16 +557,16 @@
             font-size: 0.95rem;
         }
 
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #d6d6d6;
+            margin-top: 15px;
+            letter-spacing: .08em;
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-                color: #d6d6d6;
-                margin-top: 15px;
-                letter-spacing: .08em;
             }
 
             .article-content {
@@ -625,7 +637,7 @@
             transition: .3s ease;
         }
     </style>
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"BlogPosting",
@@ -665,6 +677,14 @@
    "name":"Vizag Journey"
   }
  ]
+}
+"publisher":{
+  "@type":"Organization",
+  "name":"Wander With Aman",
+  "logo":{
+    "@type":"ImageObject",
+    "url":"https://wanderwithaman.vercel.app/Images/WanderWithAman/Favicon.png"
+  }
 }
 </script>
 </head>
