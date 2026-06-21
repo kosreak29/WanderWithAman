@@ -28,7 +28,7 @@
     <title>Chapter 02: The Ocean Answered — Visakhapatnam Vizag Travel Story</title>
     <link rel="icon" type="image/png" href="Images/WanderWithAman/Favicon.png">
     <link rel="canonical" href="https://wanderwithaman.vercel.app/vizag-vishakhapatnam.html">
-    <link rel="preload" as="image" href="Images/Vizag/Story-vizag1.webp">
+    <link rel="preload" as="image" href="Images/Vizag/Story-vizag1.webp" fetchpriority="high">
     <link rel="stylesheet" href="css/vizag.css">
 
     <script type="application/ld+json">
@@ -59,7 +59,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
  "@context":"https://schema.org",
  "@type":"BreadcrumbList",
@@ -430,8 +430,9 @@
             </p>
 
             <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8Gptu1LbC2Q?si=PCasOH_agG_LJE4H"
-                    title="YouTube video player" frameborder="0"
+                <iframe loading="lazy" width="560" height="315"
+                    src="https://www.youtube.com/embed/8Gptu1LbC2Q?si=PCasOH_agG_LJE4H" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -533,24 +534,6 @@
 
         <!-- Giscus Code Here -->
         <div id="disqus_thread"></div>
-        <script>
-            var disqus_config = function () {
-                this.page.url = window.location.href;
-                this.page.identifier = window.location.pathname;
-            };
-
-            (function () {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://wanderwithaman-vercel-app.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 3000) {
-                    loadDisqus();
-                }
-            }, { once: true });
-        </script>
 
         <noscript>
             Please enable JavaScript to view the comments powered by Disqus.
