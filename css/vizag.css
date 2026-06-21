@@ -16,7 +16,7 @@ body {
     position: absolute;
     inset: -18%;
 
-    background-image: url('Images/Vizag/Story-vizag1.webp');
+    background-image: url(../Images/Vizag/Story-vizag1.webp);
     background-size: cover;
     background-position: center;
 
