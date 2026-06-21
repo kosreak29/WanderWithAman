@@ -96,3 +96,17 @@ const minutes =
 
 document.getElementById("read-time")
     .textContent = `${minutes} Min Read`;
+
+const heroBg = document.getElementById('heroBg');
+
+window.addEventListener('scroll', () => {
+
+    const scroll = window.scrollY;
+
+    heroBg.style.transform =
+        `translateY(${scroll * 0.20}px) scale(${1 + scroll / 7000})`;
+
+    heroBg.style.filter =
+        `blur(${Math.min(scroll / 50, 10)}px)`;
+
+});
