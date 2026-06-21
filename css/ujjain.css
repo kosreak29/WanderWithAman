@@ -62,6 +62,7 @@ body {
     background: url("../Images/Ujjain/Jyotirlinga11.jpg");
     background-size: cover;
     background-position: center;
+    z-index: 0;
 }
 
 .hero::after {
