@@ -23,7 +23,7 @@ document.querySelector('.hero').addEventListener('mousemove', (e) => {
             speedY: (Math.random() - 0.5) * 2,
             life: 60
         });
-    }
+    }3
 });
 
 function animate() {
@@ -110,3 +110,14 @@ window.addEventListener('scroll', () => {
         `blur(${Math.min(scroll / 50, 10)}px)`;
 
 });
+const quote = document.getElementById("journeyQuote");
+
+setInterval(() => {
+
+    quote.classList.add("blink");
+
+    setTimeout(() => {
+        quote.classList.remove("blink");
+    }, 800);
+
+}, 3000);
