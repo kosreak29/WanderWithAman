@@ -47,11 +47,6 @@ body {
     display: none;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 3;
-}
-
 .hero-bg {
     z-index: 0;
 }
@@ -62,9 +57,9 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
-    padding-top: 450px;
+    padding-top: 480px;
     padding-left: 34%;
 
     color: white;
