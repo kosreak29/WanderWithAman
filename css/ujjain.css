@@ -80,7 +80,7 @@ body {
     float: left;
     line-height: 60px;
     padding-right: 10px;
-    color: #C4953A;
+    color: #b58a34;
 }
 
 .overlay {
@@ -151,7 +151,7 @@ h1 {
     filter: brightness(1.1);
 }
 
-.quote-box {
+/* .quote-box {
     max-width: 900px;
     margin: 0px auto;
     padding: 1px;
@@ -163,6 +163,50 @@ h1 {
     background: rgba(255, 255, 255, .03);
     color: #fff;
     box-shadow: 0 20px 60px rgba(196, 149, 58, .08);
+} */
+
+.quote-box{
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 1px;
+    font-size: 22px;
+    line-height: 1.7;
+    font-style: georgia, serif, 'Times New Roman', Times, serif;
+    text-align: center;
+    position:relative;
+    overflow:hidden;
+    border-left: 4px solid #C4953A;
+    background: rgba(255, 255, 255, .03);
+    box-shadow: 0 20px 60px rgba(196, 149, 58, .08);
+}
+
+.quote-box::before{
+
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.quote-box:hover::before{
+    left:120%;
+}
+
+.quote-box p {
+    animation: textGlow 3s infinite;
 }
 
 .scroll-indicator {
@@ -174,8 +218,8 @@ h1 {
 }
 
 .story h2 {
-    font-size: 42px;
-    color: #fff;
+    font-size: 32px;
+    color: #C4953A;
     margin-top: 80px;
     margin-bottom: 20px;
 }
