@@ -1,0 +1,6643 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f5efe5;
+    color: #1b1713;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --cream: #f5efe5;
+    --paper: #eee5d6;
+    --dark: #17130f;
+    --brown: #5c4030;
+    --muted: #75685c;
+    --orange: #c66b32;
+    --white: #fffaf2;
+
+    --serif: "Playfair Display", serif;
+    --hand: "Caveat", cursive;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.section {
+    padding: 120px 7vw;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    /* color: var(--orange); */
+}
+
+.section-heading h2,
+.intro h2,
+.photo-story h2,
+.breakfast h2,
+.science-heading h2,
+.engine-content h2,
+.first-time h2,
+.unexpected h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.05;
+    font-size: clamp(42px, 6vw, 85px);
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 24px 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    color: white;
+
+    transition: 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(23, 19, 15, 0.88);
+    backdrop-filter: blur(15px);
+    padding: 16px 5vw;
+}
+
+.logo {
+    font-family: var(--hand);
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+}
+
+.menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 5px;
+}
+
+/* =========================================
+   NAVBAR — INITIAL BACKGROUND + PADDING
+========================================= */
+
+.navbar {
+    padding: 18px 7vw;
+    background: rgba(23, 19, 15, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 250, 242, 0.10);
+}
+
+/* Logo */
+.navbar .logo {
+    padding: 4px 0;
+}
+
+/* Navigation links */
+.navbar .nav-links {
+    padding: 4px 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 20px;
+    }
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    height: 100vh;
+    min-height: 700px;
+
+    position: relative;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    padding: 0 8vw;
+
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: -30px;
+
+    background:
+        url("/Images/Nagpur/nagpur_clean_hero.webp") center / cover no-repeat;
+
+    transform: scale(1.03);
+
+    filter: blur(0px);
+
+    will-change: transform, filter;
+
+    z-index: 1;
+
+    /* IMPORTANT */
+    animation: none;
+}
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(10, 7, 5, 0.78),
+            rgba(10, 7, 5, 0.25),
+            rgba(10, 7, 5, 0.2));
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.chapter {
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(80px, 15vw, 190px);
+    line-height: 0.8;
+    font-weight: 600;
+}
+
+.hero h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 55px);
+    margin-top: 25px;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-top: 25px;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-btn {
+    margin-top: 35px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    padding: 15px 23px;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.hero-note {
+    position: absolute;
+    right: 8vw;
+    bottom: 17vh;
+
+    z-index: 2;
+
+    font-family: var(--hand);
+
+    font-size: 22px;
+
+    transform: rotate(-5deg);
+}
+
+.hero-note span {
+    display: block;
+    font-size: 18px;
+}
+
+.hero-note strong {
+    font-size: 32px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+
+    background: white;
+
+    margin: 10px auto;
+
+    animation: scrollLine 1.5s infinite;
+}
+
+@keyframes scrollLine {
+
+    0%,
+    100% {
+        transform: scaleY(0.5);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+}
+
+/* =====================================================
+   HERO CONTENT — ORIGINAL DESIGN
+===================================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin-left: 18vw;
+
+    padding-top: 30px;
+}
+
+
+/* =====================================================
+   CHAPTER
+===================================================== */
+
+.hero-content .chapter {
+    margin: 0 0 25px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    color: #ffffff;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NAGPUR
+===================================================== */
+
+.hero-content h1 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(110px,
+            12vw,
+            190px);
+
+    line-height: 0.78;
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   THE TRIP I NEVER PLANNED
+===================================================== */
+
+.hero-content h2 {
+    margin: 28px 0 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(32px,
+            4vw,
+            58px);
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+    max-width: 610px;
+
+    margin: 38px 0 0;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   START JOURNEY
+===================================================== */
+
+.hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 38px;
+
+    padding: 15px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.hero-btn span {
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+.hero-btn:hover {
+    background: #ffffff;
+
+    color: #171311;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RIGHT HANDWRITTEN NOTE
+===================================================== */
+
+.hero-note {
+    position: absolute;
+
+    right: 8vw;
+    bottom: 16vh;
+
+    z-index: 5;
+
+    color: #ffffff;
+
+    font-family: var(--hand);
+
+    transform: rotate(-5deg);
+
+    pointer-events: none;
+}
+
+
+.hero-note span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 18px;
+}
+
+
+.hero-note strong {
+    display: block;
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    font-weight: 500;
+}
+
+/* =====================================================
+   HERO MOUSE PARTICLES
+===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Canvas */
+
+#heroParticles {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    display: block;
+}
+
+
+/* Content particles ke upar */
+
+.hero-content,
+.hero-note,
+.scroll-indicator {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* Overlay */
+
+.hero-overlay {
+    z-index: 2;
+}
+
+
+/* Background */
+
+.hero-bg {
+    z-index: 1;
+
+    will-change:
+        transform,
+        filter;
+
+    transition:
+        filter 0.15s linear;
+}
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    background: var(--cream);
+}
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10vw;
+}
+
+.intro-text {
+    max-width: 620px;
+
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.intro-text p {
+    margin-bottom: 25px;
+}
+
+.admit-card {
+    background: var(--dark);
+    color: white;
+
+    padding: 30px;
+
+    margin: 35px 0;
+
+    transform: rotate(-1deg);
+
+    box-shadow: 10px 10px 0 rgba(92, 64, 48, 0.15);
+}
+
+.admit-card span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+.admit-card strong {
+    display: block;
+
+    font-family: var(--serif);
+    font-size: 35px;
+
+    margin: 8px 0;
+}
+
+.admit-card small {
+    opacity: 0.7;
+}
+
+
+/* =====================================================
+   TIMELINE — FIXED
+===================================================== */
+
+.timeline-section {
+    background: var(--paper);
+    overflow: hidden;
+}
+
+.timeline {
+    margin: 80px auto 0;
+    max-width: 1100px;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Center vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(92, 64, 48, 0.35);
+
+    transform: translateX(-50%);
+}
+
+/* Each timeline row */
+.timeline-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 50px minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 190px;
+
+    width: 100%;
+}
+
+/* =====================================================
+   ODD ITEMS
+   Time → Line → Card
+===================================================== */
+
+.timeline-item:nth-child(odd) .time {
+    grid-column: 1;
+    grid-row: 1;
+
+    text-align: right;
+
+    padding: 20px 35px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+/* =====================================================
+   EVEN ITEMS
+   Card → Line → Time
+===================================================== */
+
+.timeline-item:nth-child(even) .time {
+    grid-column: 3;
+    grid-row: 1;
+
+    text-align: left;
+
+    padding: 20px 35px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.time {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: var(--brown);
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DOT
+===================================================== */
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 0 6px var(--paper);
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.timeline-card {
+    width: calc(100% - 30px);
+
+    max-width: 500px;
+
+    background: var(--cream);
+
+    padding: 30px;
+
+    margin: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(40, 25, 10, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-card {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.timeline-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 50px rgba(40, 25, 10, 0.13);
+}
+
+/* =====================================================
+   AUTO RICKSHAW SCROLL ANIMATION
+===================================================== */
+
+.warning-card {
+    position: relative;
+    overflow: hidden;
+
+    max-width: 1000px;
+    min-height: 500px;
+    margin: auto;
+
+    display: block;
+
+    background: #f6ead8;
+    padding: 65px;
+
+    transform: rotate(-0.5deg);
+
+    box-shadow: 15px 15px 0 rgba(92, 64, 48, 0.2);
+}
+
+.moving-auto {
+    position: absolute;
+
+    width: 260px;
+    height: auto;
+
+    left: -300px;
+    bottom: 15px;
+
+    z-index: 10;
+
+    pointer-events: none;
+    user-select: none;
+
+    display: block;
+
+    will-change: transform, opacity, filter;
+
+    transform: translate3d(0, 0, 0) scale(1);
+
+    transform-origin: center bottom;
+
+    /* JS controls movement */
+    transition: none;
+}
+
+.warning-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 12px;
+
+    height: 3px;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+
+    .warning-card {
+        min-height: 450px;
+        padding: 45px 35px;
+    }
+
+    .warning-content {
+        max-width: 100%;
+    }
+
+    .moving-auto {
+        width: 190px;
+        left: -220px;
+        bottom: 10px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .warning-card {
+        min-height: 470px;
+        padding: 35px 25px;
+    }
+
+    .warning-card h2,
+    .warning-card h3 {
+        font-size: 38px;
+    }
+
+    .warning-card p {
+        font-size: 15px;
+    }
+
+    .moving-auto {
+        width: 170px;
+        left: -200px;
+        bottom: 8px;
+    }
+
+}
+
+/* Card number */
+
+.timeline-card>span {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: var(--orange);
+
+    margin-bottom: 8px;
+}
+
+
+/* Card heading */
+
+.timeline-card h3 {
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    margin: 0 0 10px;
+}
+
+
+/* Card paragraph */
+
+.timeline-card p {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+    word-break: normal;
+
+    overflow-wrap: break-word;
+}
+
+/* =====================================================
+   WARNING
+===================================================== */
+
+.warning-section {
+    padding: 90px 7vw;
+
+    background: #d6b28d;
+}
+
+.warning-card {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: block;
+
+    background: #f6ead8;
+
+    padding: 65px;
+
+    transform: rotate(-0.5deg);
+
+    box-shadow: 15px 15px 0 rgba(92, 64, 48, 0.2);
+}
+
+.warning-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 650px;
+}
+
+.warning-icon {
+    display: none;
+}
+
+.warning-card h2,
+.warning-card h3 {
+    font-family: var(--serif);
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1;
+}
+
+.warning-card p {
+    margin: 20px 0;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* =====================================================
+   PHOTO STORY
+===================================================== */
+
+.photo-story {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 7vw;
+
+    align-items: center;
+}
+
+.photo-story-image {
+    position: relative;
+}
+
+.photo-story-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.image-label {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.photo-story-content p:not(.eyebrow) {
+    line-height: 1.8;
+    margin: 25px 0;
+    color: var(--muted);
+}
+
+
+
+/* =====================================================
+   POHA SECTION — IMAGE FIX
+===================================================== */
+
+.poha-section {
+    min-height: 780px;
+
+    display: grid;
+
+    /* More space for image */
+    grid-template-columns: 42% 58%;
+
+    background: #8e610e;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* LEFT CONTENT */
+
+.poha-content {
+    padding: 100px 7vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.poha-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 9vw, 150px);
+
+    line-height: 0.8;
+}
+
+.poha-content>p {
+    max-width: 480px;
+
+    font-size: 20px;
+    line-height: 1.8;
+
+    margin: 35px 0;
+}
+
+
+/* =====================================================
+   POHA IMAGE
+===================================================== */
+
+.poha-image {
+    width: 100%;
+    height: 100%;
+
+    min-height: 780px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.poha-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       Image fills the complete right side
+    */
+    object-fit: cover;
+
+    /*
+       Keep the important upper content visible
+    */
+    object-position: center center;
+
+    transform: scale(1.02);
+
+    transition: transform 0.8s ease;
+}
+
+
+/* Slight cinematic zoom */
+
+.poha-section:hover .poha-image img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .poha-section {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+    .poha-image {
+        order: -1;
+
+        height: 500px;
+
+        min-height: 500px;
+    }
+
+    .poha-image img {
+        height: 500px;
+
+        object-position: center center;
+    }
+
+    .poha-content {
+        padding: 80px 7vw;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .poha-image {
+        height: 420px;
+
+        min-height: 420px;
+    }
+
+    .poha-image img {
+        height: 420px;
+    }
+
+    .poha-content h2 {
+        font-size: 85px;
+    }
+
+}
+
+.poha-secret {
+    max-width: 500px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+
+    padding-top: 25px;
+}
+
+.poha-secret span {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.poha-secret p {
+    font-family: var(--hand);
+    font-size: 28px;
+    margin: 8px 0 15px;
+}
+
+.poha-secret button {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.poha-secret button:hover {
+    background: white;
+    color: var(--orange);
+}
+
+.secret-answer {
+    display: none;
+    margin-top: 15px;
+}
+
+.secret-answer.active {
+    display: block;
+}
+
+
+/* =====================================================
+   EXAM
+===================================================== */
+
+.exam-section {
+    background: var(--cream);
+}
+
+.chaos-board {
+    max-width: 900px;
+
+    margin: 80px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chaos-step {
+    width: min(600px, 90%);
+
+    background: white;
+
+    padding: 25px 35px;
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.chaos-step:hover {
+    transform: translateX(10px) rotate(-1deg);
+}
+
+.chaos-step span {
+    color: var(--orange);
+    font-size: 12px;
+}
+
+.chaos-step strong {
+    font-family: var(--serif);
+    font-size: 22px;
+}
+
+.chaos-step p {
+    grid-column: 2;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.chaos-step.success {
+    background: #1e3326;
+    color: white;
+}
+
+.chaos-step.success p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.chaos-arrow {
+    padding: 12px;
+    color: var(--orange);
+}
+
+.exam-joke {
+    text-align: center;
+
+    margin-top: 90px;
+}
+
+.exam-joke p {
+    color: var(--muted);
+}
+
+.exam-joke h3 {
+    font-family: var(--serif);
+    font-size: clamp(45px, 7vw, 90px);
+
+    margin: 10px 0;
+}
+
+.exam-joke span {
+    font-family: var(--hand);
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   TRANSITION
+===================================================== */
+
+.transition-section {
+    min-height: 80vh;
+
+    background: var(--dark);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.transition-section p {
+    letter-spacing: 5px;
+    font-size: 11px;
+
+    color: #c98962;
+}
+
+.transition-section h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(65px, 12vw, 150px);
+
+    line-height: 0.85;
+
+    margin: 30px 0;
+}
+
+.transition-section span {
+    font-size: 45px;
+}
+
+
+/* =====================================================
+   BREAKFAST
+===================================================== */
+
+.breakfast {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+.breakfast-image img {
+    height: 400px;
+    width: 100%;
+}
+
+.breakfast-text p:not(.eyebrow) {
+    color: var(--muted);
+    line-height: 1.8;
+
+    margin: 25px 0;
+}
+
+.breakfast-text h2 {
+    font-size: clamp(55px, 7vw, 100px);
+}
+
+.handwritten {
+    font-family: var(--hand);
+
+    font-size: 32px !important;
+
+    color: var(--dark) !important;
+}
+
+
+/* =====================================================
+   SCIENCE
+===================================================== */
+
+.science-section {
+    background: #ded5c6;
+}
+
+.science-heading {
+    max-width: 900px;
+}
+
+.science-heading>p:last-child {
+    margin-top: 30px;
+
+    max-width: 600px;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.science-intro {
+    max-width: 550px;
+
+    margin: 70px 0 45px auto;
+
+    font-family: var(--serif);
+
+    font-size: 30px;
+
+    line-height: 1.5;
+}
+
+.science-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 20px;
+}
+
+.science-card {
+    background: var(--cream);
+
+    min-height: 330px;
+
+    padding: 30px;
+
+    position: relative;
+
+    transition: 0.4s;
+}
+
+.science-card:hover {
+    transform: translateY(-10px);
+}
+
+/* =====================================================
+   GAP — SCIENCE GALLERY → AIRCRAFT ENGINE
+===================================================== */
+
+.science-gallery {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   SCIENCE AUTO GALLERY
+===================================================== */
+
+.science-card.large.science-gallery {
+    position: relative;
+
+    grid-row: span 2;
+
+    padding: 0;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+/* =====================================================
+   SCIENCE GALLERY CONTROLS
+===================================================== */
+
+.science-gallery-controls {
+    position: absolute;
+
+    right: 30px;
+    bottom: 30px;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.science-arrow {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.22);
+
+    color: white;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.science-arrow:hover {
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border-color: white;
+
+    transform: scale(1.08);
+
+}
+
+
+.science-arrow:active {
+
+    transform: scale(0.94);
+
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.science-gallery-dots {
+
+    position: static;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.science-gallery-dots button {
+
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.science-gallery-dots button.active {
+
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .science-gallery-controls {
+
+        right: 20px;
+        bottom: 20px;
+
+        gap: 9px;
+
+    }
+
+    .science-arrow {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 17px;
+
+    }
+
+}
+
+/* =====================================================
+   SLIDES CONTAINER
+===================================================== */
+
+.science-slides {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =====================================================
+   INDIVIDUAL SLIDE
+===================================================== */
+
+.science-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(40px) scale(1.03);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0.9s ease;
+}
+
+
+/* Active slide */
+
+.science-slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0) scale(1);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.science-slide img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 5s ease;
+}
+
+
+/* Slow cinematic zoom */
+
+.science-slide.active img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =====================================================
+   DARK GRADIENT
+===================================================== */
+
+.science-slide::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.35) 45%,
+            rgba(0, 0, 0, 0.05) 75%);
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.science-slide-overlay {
+
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+    bottom: 35px;
+
+    z-index: 3;
+
+    color: white;
+
+    transform:
+        translateY(20px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease 0.25s,
+        transform 0.8s ease 0.25s;
+}
+
+
+/* Show text */
+
+.science-slide.active .science-slide-overlay {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+.science-slide-overlay span {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #e5a36f;
+
+    margin-bottom: 10px;
+}
+
+
+.science-slide-overlay h3 {
+
+    font-family: var(--serif);
+
+    font-size: 36px;
+
+    line-height: 1.05;
+
+    margin: 0 0 10px;
+}
+
+
+.science-slide-overlay p {
+
+    max-width: 550px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.science-gallery-dots {
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 35px;
+
+    z-index: 10;
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.science-gallery-dots button {
+
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.science-gallery-dots button.active {
+
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .science-card.large.science-gallery {
+
+        min-height: 500px;
+
+        height: 500px;
+
+    }
+
+    .science-slide-overlay {
+
+        left: 25px;
+        right: 25px;
+        bottom: 30px;
+
+    }
+
+    .science-slide-overlay h3 {
+
+        font-size: 30px;
+
+    }
+
+    .science-gallery-dots {
+
+        right: 25px;
+        bottom: 30px;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .science-card.large.science-gallery {
+
+        min-height: 430px;
+
+        height: 430px;
+
+    }
+
+    .science-slide-overlay {
+
+        left: 20px;
+        right: 20px;
+        bottom: 25px;
+
+    }
+
+    .science-slide-overlay h3 {
+
+        font-size: 27px;
+
+    }
+
+    .science-slide-overlay p {
+
+        font-size: 14px;
+
+    }
+
+}
+
+.science-card span {
+    font-size: 11px;
+    color: var(--orange);
+}
+
+.science-card h3 {
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.science-card p {
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.science-card.large p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.science-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =====================================================
+   PLANET SECTION — VISUAL SEPARATION
+===================================================== */
+
+.planet-section {
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 40%,
+            #3b354f 0%,
+            #171522 45%,
+            #0b0a10 100%);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    /* Clear separation from Science Gallery */
+    border-top: 12px solid #ded5c6;
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+
+    background-size: 80px 80px;
+
+    opacity: 0.25;
+
+    animation: starsMove 20s linear infinite;
+}
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+
+}
+
+.planet-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 100px 20px;
+}
+
+.planet-content .eyebrow {
+    color: #c9a87d;
+}
+
+.planet-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 8vw, 110px);
+
+    line-height: 0.9;
+}
+
+.weight-number {
+    font-family: var(--serif);
+
+    font-size: clamp(70px, 14vw, 190px);
+
+    line-height: 1;
+
+    margin-top: 50px;
+}
+
+.weight-number span {
+    font-family: var(--hand);
+
+    font-size: 50px;
+}
+
+.planet-name {
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+}
+
+.planet-story {
+    font-family: var(--hand);
+
+    font-size: 28px;
+
+    margin: 35px auto;
+
+    max-width: 600px;
+}
+
+.comment-box {
+    margin: 40px auto 0;
+
+    padding: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    max-width: 500px;
+}
+
+.comment-box strong {
+    letter-spacing: 2px;
+}
+
+.comment-box p {
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.comment-box span {
+    color: #e1b17e;
+    font-size: 12px;
+}
+
+/* =====================================================
+   GAP BETWEEN FIGHTER JET AND UNIVERSE
+===================================================== */
+
+.planet-section {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   AIRCRAFT ENGINE — CINEMATIC IMAGE SECTION
+===================================================== */
+
+.aircraft-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 850px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+    background: #111;
+}
+
+.aircraft-section {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.aircraft-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transform: scale(1.03);
+
+    z-index: 1;
+
+    transition: transform 1.4s ease;
+}
+
+
+/* Cinematic zoom on hover */
+
+.aircraft-section:hover .aircraft-bg {
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.aircraft-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(8, 7, 6, 0.88) 0%,
+            rgba(8, 7, 6, 0.68) 38%,
+            rgba(8, 7, 6, 0.30) 68%,
+            rgba(8, 7, 6, 0.12) 100%);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.aircraft-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 850px;
+
+    margin-left: 8vw;
+
+    padding: 120px 0;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.aircraft-content .eyebrow {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: #d77a42;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.aircraft-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(70px,
+            8vw,
+            145px);
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+
+    margin: 0 0 40px;
+
+    color: white;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.aircraft-icon {
+    font-size: 55px;
+
+    margin: 10px 0 30px;
+
+    width: fit-content;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.aircraft-content p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    margin: 0 0 18px;
+}
+
+
+/* =====================================================
+   BOTTOM TAG
+===================================================== */
+
+.aircraft-tag {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 7vw;
+    bottom: 45px;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =====================================================
+   IMAGE EDGE GLOW
+===================================================== */
+
+.aircraft-section::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.45),
+            transparent 30%);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .aircraft-section {
+        min-height: 700px;
+
+        align-items: flex-end;
+    }
+
+    .aircraft-section {
+        margin-bottom: 30px;
+    }
+
+    .aircraft-content {
+        margin-left: 7vw;
+        margin-right: 7vw;
+
+        padding: 100px 0 110px;
+    }
+
+    .aircraft-content h2 {
+        font-size: clamp(60px,
+                12vw,
+                100px);
+    }
+
+    .aircraft-content p {
+        font-size: 16px;
+    }
+
+    .aircraft-tag {
+        left: 7vw;
+        right: auto;
+
+        bottom: 30px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .aircraft-section {
+        min-height: 650px;
+    }
+
+    .aircraft-bg {
+        object-position: center;
+    }
+
+    .aircraft-overlay {
+        background:
+            linear-gradient(0deg,
+                rgba(8, 7, 6, 0.92) 0%,
+                rgba(8, 7, 6, 0.58) 55%,
+                rgba(8, 7, 6, 0.18) 100%);
+    }
+
+    .aircraft-content {
+        margin-left: 6vw;
+        margin-right: 6vw;
+
+        padding-bottom: 90px;
+    }
+
+    .aircraft-content .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 25px;
+    }
+
+    .aircraft-content h2 {
+        font-size: 60px;
+
+        line-height: 0.85;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 25px;
+    }
+
+    .aircraft-icon {
+        font-size: 45px;
+
+        margin: 10px 0 20px;
+    }
+
+    .aircraft-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .aircraft-tag {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        bottom: 25px;
+    }
+}
+
+/* =====================================================
+   FIGHTER AIRCRAFT SECTION
+===================================================== */
+
+.fighter-section {
+
+    min-height: 850px;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    align-items: stretch;
+
+    background: #d8cdbb;
+
+    color: #171412;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.fighter-image {
+
+    position: relative;
+
+    min-height: 850px;
+
+    overflow: hidden;
+
+    background: #b8aa95;
+}
+
+
+.fighter-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1.2s ease;
+}
+
+
+/* Subtle zoom */
+
+.fighter-section:hover .fighter-image img {
+
+    transform: scale(1.06);
+
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+===================================================== */
+
+.fighter-image-label {
+
+    position: absolute;
+
+    left: 35px;
+    bottom: 30px;
+
+    z-index: 3;
+
+    padding: 9px 14px;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.fighter-content {
+
+    padding: 100px 7vw 100px 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.fighter-content .eyebrow {
+
+    color: #b84d20;
+
+    margin-bottom: 35px;
+}
+
+
+.fighter-content h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(65px,
+            7vw,
+            105px);
+
+    line-height: 0.86;
+
+    margin: 0;
+
+    letter-spacing: -2px;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.fighter-icon {
+
+    font-size: 55px;
+
+    margin:
+
+        30px 0 25px;
+
+    transform: rotate(-8deg);
+
+    width: fit-content;
+}
+
+
+/* =====================================================
+   PARAGRAPHS
+===================================================== */
+
+.fighter-content p {
+
+    max-width: 520px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #554b42;
+
+    margin: 0 0 22px;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.fighter-note {
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(23, 20, 18, 0.25);
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: flex-start;
+
+    max-width: 500px;
+}
+
+
+.fighter-note span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #b84d20;
+}
+
+
+.fighter-note strong {
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color: #332c27;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .fighter-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .fighter-image {
+
+        min-height: 550px;
+
+        height: 550px;
+
+    }
+
+
+    .fighter-content {
+
+        padding: 75px 7vw;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .fighter-image {
+
+        min-height: 430px;
+
+        height: 430px;
+
+    }
+
+
+    .fighter-image-label {
+
+        left: 20px;
+
+        bottom: 20px;
+
+        font-size: 8px;
+
+    }
+
+
+    .fighter-content {
+
+        padding: 60px 6vw;
+
+    }
+
+
+    .fighter-content h2 {
+
+        font-size: 60px;
+
+    }
+
+
+    .fighter-icon {
+
+        font-size: 45px;
+
+    }
+
+}
+
+/* =====================================================
+   GAP BETWEEN FIGHTER JET AND UNIVERSE
+===================================================== */
+
+.fighter-section {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   UNIVERSE / PLANETARIUM IMAGE SECTION
+===================================================== */
+
+.universe-section {
+    position: relative;
+
+    min-height: 850px;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #08080d;
+}
+
+
+/* Background */
+
+.universe-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.03);
+
+    z-index: 1;
+
+    transition: transform 1.2s ease;
+}
+
+
+/* Dark cinematic overlay */
+
+.universe-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 5, 12, 0.92) 0%,
+            rgba(5, 5, 12, 0.72) 38%,
+            rgba(5, 5, 12, 0.28) 70%,
+            rgba(5, 5, 12, 0.12) 100%);
+}
+
+
+/* Content */
+
+.universe-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin-left: 8vw;
+}
+
+
+.universe-content .eyebrow {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: #d77a42;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+}
+
+
+.universe-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(70px,
+            8vw,
+            140px);
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+
+    margin: 0 0 40px;
+
+    color: white;
+}
+
+
+.universe-content p {
+    max-width: 720px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    margin: 0 0 35px;
+}
+
+
+.universe-tags {
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* Subtle image zoom */
+
+.universe-section:hover .universe-bg {
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .universe-section {
+        min-height: 700px;
+    }
+
+    .universe-content {
+        margin-left: 7vw;
+
+        margin-right: 7vw;
+    }
+
+    .universe-content h2 {
+        font-size: clamp(60px,
+                12vw,
+                100px);
+    }
+
+    .universe-content p {
+        font-size: 17px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .universe-section {
+        min-height: 650px;
+    }
+
+    .universe-content {
+        margin-left: 6vw;
+
+        margin-right: 6vw;
+    }
+
+    .universe-content h2 {
+        font-size: 58px;
+
+        letter-spacing: -1px;
+    }
+
+    .universe-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .universe-tags {
+        font-size: 9px;
+
+        letter-spacing: 4px;
+    }
+
+}
+
+/* =====================================================
+   GAP BETWEEN UNIVERSE & DIAMOND
+===================================================== */
+
+.universe-section {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   UNEXPECTED
+===================================================== */
+
+.unexpected {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10vw;
+}
+
+.unexpected-list {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.unexpected-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.unexpected-list div:hover {
+    padding-left: 15px;
+}
+
+.unexpected-list span {
+    color: var(--orange);
+
+    font-size: 11px;
+}
+
+.unexpected-list strong {
+    font-family: var(--serif);
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   DIAMOND SECTION
+===================================================== */
+
+.diamond-section {
+
+    min-height: 780px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 100px 7vw;
+
+    background:
+        radial-gradient(circle at 75% 40%,
+            #3a2b24 0%,
+            #241d19 38%,
+            #171311 100%);
+
+    color: white;
+
+    color: white;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   DIAMOND IMAGE
+===================================================== */
+
+.diamond-image {
+
+    width: 100%;
+
+    height: 580px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.diamond-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.02);
+
+    transition:
+        transform 1.2s ease;
+}
+
+
+/* Cinematic zoom */
+
+.diamond-section:hover .diamond-image img {
+
+    transform: scale(1.06);
+
+}
+
+.diamond-section {
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   IMAGE DARK GRADIENT
+===================================================== */
+
+.diamond-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(251, 112, 7, 0.35),
+            transparent 60%);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.diamond-content {
+
+    position: relative;
+
+    max-width: 650px;
+}
+
+
+.diamond-content .eyebrow {
+
+    display: block;
+
+    color: #d77a42;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 30px;
+}
+
+
+.diamond-content h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(80px,
+            9vw,
+            145px);
+
+    line-height: 0.78;
+
+    letter-spacing: -3px;
+
+    margin: 0;
+
+    color: white;
+}
+
+
+/* =====================================================
+   DIAMOND ICON
+===================================================== */
+
+.diamond-icon {
+
+    font-size: 70px;
+
+    margin:
+
+        30px 0 25px;
+
+    width: fit-content;
+
+    transform: rotate(-8deg);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.diamond-content p {
+
+    max-width: 520px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   NOTE
+===================================================== */
+
+.diamond-note {
+
+    margin-top: 30px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+
+    gap: 18px;
+
+    max-width: 520px;
+}
+
+
+.diamond-note span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #d77a42;
+}
+
+
+.diamond-note strong {
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255, 255, 255, 0.7);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .diamond-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding: 80px 7vw;
+    }
+
+
+    .diamond-image {
+
+        height: 500px;
+
+        order: 1;
+    }
+
+
+    .diamond-content {
+
+        order: 2;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .diamond-section {
+
+        padding: 60px 6vw;
+
+    }
+
+
+    .diamond-image {
+
+        height: 400px;
+
+    }
+
+
+    .diamond-content h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .diamond-icon {
+
+        font-size: 50px;
+
+    }
+
+}
+
+/* =====================================================
+   FIRST TIME
+===================================================== */
+
+.first-time {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+.first-time-content p:not(.eyebrow) {
+    line-height: 1.8;
+
+    color: var(--muted);
+
+    margin: 25px 0;
+}
+
+.food-gallery {
+    position: relative;
+}
+
+.food-gallery::before {
+
+    z-index: 2;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    font-family: var(--hand);
+
+    font-size: 22px;
+
+    transform: rotate(-5deg);
+}
+
+.food-gallery img {
+    height: 600px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+    background: var(--paper);
+}
+
+.gallery-grid {
+    max-width: 1100px;
+
+    margin: 80px auto 0;
+
+    columns: 3 250px;
+
+    column-gap: 18px;
+}
+
+.gallery-grid img {
+    margin-bottom: 18px;
+
+    break-inside: avoid;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   LAST BITE
+===================================================== */
+
+.last-bite {
+    min-height: 550px;
+
+    padding: 100px 10vw;
+
+    display: flex;
+    align-items: center;
+
+    background: #d3a87c;
+}
+
+.last-bite h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.9;
+}
+
+.last-bite p:not(.eyebrow) {
+    max-width: 550px;
+
+    line-height: 1.8;
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   RETURN
+===================================================== */
+
+.return-section {
+    height: 90vh;
+
+    position: relative;
+
+    color: white;
+}
+
+.return-section img {
+    height: 100%;
+}
+
+.return-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(5, 5, 5, 0.55);
+}
+
+.return-content {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.return-content h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(55px, 10vw, 130px);
+
+    line-height: 0.9;
+}
+
+.return-content h2 span {
+    font-family: var(--hand);
+
+    font-size: 80px;
+}
+
+.return-content p:last-child {
+    margin-top: 30px;
+
+    max-width: 550px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   ENDING
+===================================================== */
+
+.ending {
+    text-align: center;
+
+    background: var(--cream);
+}
+
+.ending-lines {
+    margin: 70px auto;
+
+    max-width: 900px;
+}
+
+.ending-lines p {
+    font-family: var(--serif);
+
+    font-size: clamp(35px, 5vw, 70px);
+
+    line-height: 1.1;
+
+    margin: 15px;
+}
+
+.ending h2 {
+    font-family: var(--serif);
+
+    font-size: clamp(40px, 6vw, 80px);
+
+    margin-top: 80px;
+}
+
+.ending-sub {
+    font-family: var(--hand);
+
+    font-size: 35px;
+
+    margin-top: 15px;
+}
+
+.final-message {
+    max-width: 650px;
+
+    margin: 70px auto;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.final-message p {
+    margin-bottom: 25px;
+}
+
+.signature {
+    font-family: var(--hand);
+
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--dark);
+
+    color: white;
+
+    padding: 30px 7vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    opacity: 0.95;
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    z-index: 2000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+
+    object-fit: contain;
+}
+
+#closeLightbox {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    background: none;
+    border: 0;
+
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .section {
+        padding: 80px 6vw;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar.mobile-open {
+        background: rgba(20, 15, 12, 0.96);
+    }
+
+    .navbar.mobile-open .nav-links {
+        display: flex;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        background: rgba(20, 15, 12, 0.96);
+
+        text-align: center;
+    }
+
+    .hero {
+        padding: 0 7vw;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .intro-grid,
+    .photo-story,
+    .breakfast,
+    .engine-section,
+    .first-time,
+    .unexpected {
+        grid-template-columns: 1fr;
+    }
+
+    /* =====================================================
+   TIMELINE — MOBILE FIX
+===================================================== */
+
+    @media (max-width: 900px) {
+
+        .timeline {
+            padding-left: 0;
+        }
+
+        .timeline::before {
+            left: 20px;
+            transform: none;
+        }
+
+        .timeline-item {
+            display: grid;
+
+            grid-template-columns: 40px minmax(0, 1fr);
+
+            min-height: auto;
+
+            margin-bottom: 35px;
+        }
+
+        /* Dot */
+        .timeline-item:nth-child(odd) .timeline-dot,
+        .timeline-item:nth-child(even) .timeline-dot {
+            grid-column: 1;
+            grid-row: 1;
+
+            margin: 0 auto;
+        }
+
+        /* Time */
+        .timeline-item:nth-child(odd) .time,
+        .timeline-item:nth-child(even) .time {
+            grid-column: 2;
+            grid-row: 1;
+
+            text-align: left;
+
+            padding: 0 15px 8px;
+        }
+
+        /* Card */
+        .timeline-item:nth-child(odd) .timeline-card,
+        .timeline-item:nth-child(even) .timeline-card {
+            grid-column: 2;
+            grid-row: 2;
+
+            width: calc(100% - 15px);
+
+            max-width: none;
+
+            margin: 0 0 0 15px;
+        }
+
+    }
+
+    .warning-card {
+        grid-template-columns: 1fr;
+
+        padding: 35px;
+    }
+
+    .warning-icon {
+        text-align: left;
+    }
+
+    .photo-story-image img,
+    .breakfast-image img,
+    .engine-image img {
+        height: 500px;
+    }
+
+    .poha-section {
+        grid-template-columns: 1fr;
+    }
+
+    .poha-image {
+        order: -1;
+    }
+
+    .poha-image img {
+        min-height: 450px;
+        height: 450px;
+    }
+
+    .poha-content {
+        padding: 80px 7vw;
+    }
+
+    .science-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .science-card.large {
+        grid-row: auto;
+    }
+
+    .science-card.large img {
+        min-height: 450px;
+    }
+
+    .science-intro {
+        margin-left: 0;
+    }
+
+    .diamond-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 70px;
+    }
+
+    .diamond-glow {
+        font-size: 110px;
+    }
+
+    .planetarium-section {
+        height: 700px;
+    }
+
+    .planetarium-content {
+        left: 7vw;
+        right: 7vw;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .section {
+        padding: 70px 5vw;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .section-heading h2,
+    .intro h2,
+    .photo-story h2,
+    .science-heading h2,
+    .engine-content h2,
+    .first-time h2,
+    .unexpected h2 {
+        font-size: 48px;
+    }
+
+    .poha-content h2 {
+        font-size: 85px;
+    }
+
+    .warning-card {
+        padding: 28px;
+    }
+
+    .photo-story-image img,
+    .breakfast-image img,
+    .engine-image img {
+        height: 400px;
+    }
+
+    .transition-section h2 {
+        font-size: 60px;
+    }
+
+    .weight-number {
+        font-size: 70px;
+    }
+
+    .weight-number span {
+        font-size: 30px;
+    }
+
+    .planet-content h2 {
+        font-size: 45px;
+    }
+
+    .planetarium-section {
+        height: 650px;
+    }
+
+    .planetarium-content h2 {
+        font-size: 55px;
+    }
+
+    .food-gallery img {
+        height: 420px;
+    }
+
+    .last-bite h2 {
+        font-size: 55px;
+    }
+
+    .return-section {
+        height: 650px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* =====================================================
+   FINAL HERO FIX — KEEP THIS AT THE VERY END
+   Restores the cinematic Nagpur hero layout
+===================================================== */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: -35px;
+    z-index: 1;
+    width: calc(100% + 70px);
+    height: calc(100% + 70px);
+    background: url("/Images/Nagpur/nagpur_clean_hero.webp") center center / cover no-repeat;
+    transform: scale(1.03);
+    filter: blur(0px);
+    will-change: transform, filter;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg,
+            rgba(8, 6, 5, 0.76) 0%,
+            rgba(8, 6, 5, 0.36) 38%,
+            rgba(8, 6, 5, 0.10) 72%,
+            rgba(8, 6, 5, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.04) 55%,
+            rgba(0, 0, 0, 0.25) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    width: min(900px, 70vw);
+    max-width: 900px;
+    margin-left: 15vw !important;
+    margin-right: 0;
+    padding: 0 !important;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-content .chapter,
+.hero .chapter {
+    display: block;
+    margin: 0 0 25px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero-content h1,
+.hero h1 {
+    margin: 0;
+    color: #fff;
+    font-family: var(--serif);
+    font-size: clamp(100px, 12vw, 190px);
+    font-weight: 600;
+    line-height: 0.80;
+    letter-spacing: -4px;
+}
+
+.hero-content h2,
+.hero h2 {
+    margin: 28px 0 0;
+    color: #fff;
+    font-family: var(--serif);
+    font-size: clamp(34px, 4vw, 58px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.hero-content .hero-description,
+.hero .hero-description {
+    max-width: 620px;
+    margin: 38px 0 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+.hero-content .hero-btn,
+.hero .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 38px;
+    padding: 15px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 50px;
+    color: #fff;
+    background: transparent;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .hero-btn span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.hero .hero-btn:hover {
+    background: #fff;
+    color: #17130f;
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    position: absolute !important;
+    right: 8vw !important;
+    bottom: 17vh !important;
+    z-index: 5 !important;
+    display: block;
+    color: #fff;
+    font-family: var(--hand);
+    font-size: 22px;
+    line-height: 1.2;
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+
+.hero-note span {
+    display: block;
+    margin-bottom: 3px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.hero-note strong {
+    display: block;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+#heroParticles {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.hero-content,
+.hero-note,
+.scroll-indicator {
+    z-index: 5;
+}
+
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    z-index: 5;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: 700px;
+        height: 100vh;
+        padding: 0 7vw;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 760px;
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hero-content h1,
+    .hero h1 {
+        font-size: clamp(80px, 15vw, 150px);
+    }
+
+    .hero-content h2,
+    .hero h2 {
+        font-size: clamp(30px, 5vw, 48px);
+    }
+
+    .hero-note {
+        display: none !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        min-height: 650px;
+        padding: 0 6vw;
+    }
+
+    .hero-content .chapter,
+    .hero .chapter {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1,
+    .hero h1 {
+        font-size: 75px;
+        letter-spacing: -2px;
+    }
+
+    .hero-content h2,
+    .hero h2 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .hero-content .hero-description,
+    .hero .hero-description {
+        max-width: 100%;
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-content .hero-btn,
+    .hero .hero-btn {
+        margin-top: 28px;
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+}
+
+/* =====================================================
+   MIRROR MAZE SECTION
+===================================================== */
+
+.mirror-maze-section {
+    position: relative;
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #111;
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.mirror-maze-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("/Images/Nagpur/mirror_maze.webp");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+    z-index: 1;
+
+    transition:
+        transform 1.2s ease,
+        filter 1.2s ease;
+}
+
+
+/* =====================================================
+   CINEMATIC OVERLAY
+===================================================== */
+
+.mirror-maze-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.60) 35%,
+            rgba(0, 0, 0, 0.22) 70%,
+            rgba(0, 0, 0, 0.38) 100%);
+
+    z-index: 2;
+}
+
+
+/* Subtle bottom fade */
+
+.mirror-maze-overlay::after {
+    content: "";
+
+    position: absolute;
+    inset: auto 0 0 0;
+
+    height: 35%;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.65),
+            transparent);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.mirror-maze-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 90%);
+
+    margin-left: clamp(6%,
+            10vw,
+            12%);
+
+    padding: 100px 0;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.mirror-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.mirror-maze-content h2 {
+    margin: 0;
+
+    font-size: clamp(48px,
+            7vw,
+            105px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 800;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.mirror-intro {
+    max-width: 520px;
+
+    margin: 34px 0 0;
+
+    font-size: clamp(17px,
+            2vw,
+            21px);
+
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.mirror-divider {
+    width: 75px;
+    height: 1px;
+
+    margin: 30px 0;
+
+    background: rgba(255,
+            255,
+            255,
+            0.6);
+}
+
+
+/* =====================================================
+   STORY TEXT
+===================================================== */
+
+.mirror-story {
+    max-width: 470px;
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: rgba(255,
+            255,
+            255,
+            0.72);
+}
+
+
+/* =====================================================
+   FUN NOTE
+===================================================== */
+
+.mirror-note {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 38px;
+
+    padding: 15px 20px;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.75);
+
+    background: rgba(0,
+            0,
+            0,
+            0.22);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.mirror-note span {
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,
+            255,
+            255,
+            0.55);
+}
+
+
+.mirror-note strong {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   LOCATION TAG
+===================================================== */
+
+.mirror-location {
+    position: absolute;
+
+    right: 35px;
+    bottom: 30px;
+
+    z-index: 4;
+
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,
+            255,
+            255,
+            0.55);
+
+    writing-mode: vertical-rl;
+
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   HOVER EFFECT
+===================================================== */
+
+.mirror-maze-section:hover .mirror-maze-bg {
+
+    transform: scale(1.055);
+
+    filter: contrast(1.04);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mirror-maze-section {
+        min-height: 78vh;
+
+        align-items: flex-end;
+    }
+
+
+    .mirror-maze-bg {
+        background-position: center center;
+    }
+
+
+    .mirror-maze-overlay {
+        background:
+            linear-gradient(180deg,
+                rgba(0, 0, 0, 0.15) 0%,
+                rgba(0, 0, 0, 0.38) 35%,
+                rgba(0, 0, 0, 0.90) 100%);
+    }
+
+
+    .mirror-maze-content {
+
+        width: 88%;
+
+        margin: 0 auto;
+
+        padding:
+            80px 0 70px;
+    }
+
+
+    .mirror-maze-content h2 {
+
+        font-size:
+            clamp(43px, 13vw, 70px);
+
+        line-height: 0.9;
+    }
+
+
+    .mirror-intro {
+
+        margin-top: 25px;
+
+        font-size: 16px;
+
+        line-height: 1.55;
+    }
+
+
+    .mirror-story {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .mirror-location {
+
+        right: 16px;
+
+        bottom: 18px;
+
+        font-size: 7px;
+    }
+
+}
+
+/* =====================================================
+   EARTH QUESTION REVEAL
+===================================================== */
+
+.earth-weight-reveal {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transform:
+        translateY(25px) scale(0.96);
+
+    margin-top: 0;
+
+    pointer-events: none;
+
+    transition:
+        max-height 0.8s cubic-bezier(0.22,
+            1,
+            0.36,
+            1),
+        opacity 0.6s ease,
+        transform 0.7s ease,
+        margin-top 0.7s ease;
+}
+
+
+.earth-weight-reveal.active {
+    max-height: 300px;
+
+    opacity: 1;
+
+    transform:
+        translateY(0) scale(1);
+
+    margin-top: 35px;
+
+    pointer-events: auto;
+}
+
+
+/* Small heading */
+
+.earth-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+
+    color: rgba(255,
+            255,
+            255,
+            0.5);
+}
+
+
+/* Question */
+
+.earth-weight-reveal h3 {
+    margin: 0;
+
+    font-size: clamp(35px,
+            5vw,
+            65px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.04em;
+
+    font-weight: 400;
+
+    color: #fff;
+}
+
+
+/* Calculate line */
+
+.earth-weight-reveal p {
+    margin: 22px 0 8px;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: rgba(255,
+            255,
+            255,
+            0.65);
+}
+
+
+/* Comment CTA */
+
+.earth-weight-reveal strong {
+    display: block;
+
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    font-weight: 400;
+
+    color: rgba(255,
+            255,
+            255,
+            0.9);
+}
+
+/* =========================================================
+   PLANET SECTION — CINEMATIC REDESIGN
+   Add this at the VERY END of nagpur.css
+========================================================= */
+
+
+/* =========================================================
+   FONT IMPORT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.planet-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+            #252238 0%,
+            #171624 42%,
+            #0c0c14 100%);
+
+    color: #fff;
+
+    padding:
+        110px 30px;
+}
+
+
+/* =========================================================
+   STAR LAYER
+========================================================= */
+
+.planet-section .stars {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.45;
+
+    background-image:
+        radial-gradient(circle,
+            rgba(255, 255, 255, 0.55) 1px,
+            transparent 1px);
+
+    background-size:
+        90px 90px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+
+/* =========================================================
+   CONTENT WRAPPER
+========================================================= */
+
+.planet-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px,
+            100%);
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.planet-content .eyebrow {
+    margin: 0 0 18px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.34em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.62);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.planet-content>h2 {
+    margin: 0;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(60px,
+            8vw,
+            118px);
+
+    line-height:
+        0.78;
+
+    font-weight: 600;
+
+    letter-spacing:
+        -0.045em;
+
+    text-transform:
+        uppercase;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.planet-content>p:not(.planet-name):not(.planet-story) {
+    max-width: 760px;
+
+    margin:
+        28px auto 0;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size:
+        clamp(14px,
+            1.5vw,
+            18px);
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.66);
+}
+
+
+/* =========================================================
+   WEIGHT AREA
+========================================================= */
+
+.planet-weight-reveal {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   REMOVE DEFAULT BUTTON APPEARANCE
+========================================================= */
+
+.planet-sun-weight {
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    padding:
+        15px 45px 25px;
+
+    margin: 0;
+
+    width: auto;
+
+    min-width: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* Remove browser focus box */
+
+.planet-sun-weight:focus {
+    outline: none;
+}
+
+
+/* Keyboard accessibility */
+
+.planet-sun-weight:focus-visible {
+    outline:
+        1px solid rgba(255,
+            255,
+            255,
+            0.4);
+
+    outline-offset: 12px;
+}
+
+
+/* =========================================================
+   HUGE WEIGHT NUMBER
+========================================================= */
+
+.planet-number {
+    display: block;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(105px,
+            15vw,
+            205px);
+
+    line-height:
+        0.72;
+
+    font-weight: 500;
+
+    letter-spacing:
+        -0.065em;
+
+    color: #fff;
+
+    text-shadow:
+        0 12px 50px rgba(0,
+            0,
+            0,
+            0.25);
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+/* =========================================================
+   KG
+========================================================= */
+
+.planet-unit {
+    position: absolute;
+
+    right:
+        clamp(0px,
+            4vw,
+            45px);
+
+    bottom:
+        46px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(25px,
+            3vw,
+            43px);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.9);
+}
+
+
+/* =========================================================
+   SUN LABEL
+========================================================= */
+
+.planet-label {
+    display: block;
+
+    margin-top: 28px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.34em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.7);
+}
+
+
+/* =========================================================
+   CLICK HINT
+========================================================= */
+
+.planet-click-hint {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 22px;
+
+    padding:
+        8px 16px;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.18);
+
+    border-radius: 100px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.25em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.45);
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.035);
+
+    transition:
+        all 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.planet-sun-weight:hover .planet-number {
+
+    transform:
+        scale(1.025);
+}
+
+
+.planet-sun-weight:hover .planet-click-hint {
+
+    color: #fff;
+
+    border-color:
+        rgba(255,
+            255,
+            255,
+            0.45);
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.08);
+}
+
+
+/* =========================================================
+   REVEAL AREA
+========================================================= */
+
+.earth-weight-reveal {
+
+    width:
+        min(700px,
+            90%);
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform:
+        translateY(35px) scale(0.96);
+
+    margin-top: 0;
+
+    pointer-events: none;
+
+    transition:
+        max-height 0.9s cubic-bezier(0.22,
+            1,
+            0.36,
+            1),
+
+        opacity 0.6s ease,
+
+        transform 0.75s cubic-bezier(0.22,
+            1,
+            0.36,
+            1),
+
+        margin-top 0.75s ease;
+}
+
+
+/* =========================================================
+   REVEALED STATE
+========================================================= */
+
+.earth-weight-reveal.active {
+
+    max-height: 350px;
+
+    opacity: 1;
+
+    transform:
+        translateY(0) scale(1);
+
+    margin-top: 35px;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   REVEAL EYEBROW
+========================================================= */
+
+.earth-eyebrow {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing:
+        0.35em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.4);
+}
+
+
+/* =========================================================
+   EARTH QUESTION
+========================================================= */
+
+.earth-weight-reveal h3 {
+
+    margin: 0;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(48px,
+            6vw,
+            82px);
+
+    line-height:
+        0.82;
+
+    font-weight: 500;
+
+    letter-spacing:
+        -0.045em;
+
+    text-transform:
+        uppercase;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   QUESTION TEXT
+========================================================= */
+
+.earth-weight-reveal p {
+
+    margin:
+        25px auto 8px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(19px,
+            2vw,
+            25px);
+
+    font-style: italic;
+
+    line-height: 1.4;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.7);
+}
+
+
+/* =========================================================
+   COMMENT CTA
+========================================================= */
+
+.earth-weight-reveal strong {
+
+    display: block;
+
+    max-width: 560px;
+
+    margin: 10px auto 0;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size:
+        clamp(13px,
+            1.3vw,
+            16px);
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.88);
+}
+
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.planet-bottom-note {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+
+    width: 90%;
+}
+
+
+.planet-bottom-note span {
+
+    display: block;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing:
+        0.3em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.35);
+}
+
+
+.planet-bottom-note p {
+
+    margin: 8px 0 0;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 16px;
+
+    font-style: italic;
+
+    color:
+        rgba(255,
+            255,
+            255,
+            0.45);
+}
+
+
+/* =========================================================
+   REVEALED BUTTON STATE
+========================================================= */
+
+.planet-sun-weight.revealed {
+
+    opacity: 0.82;
+
+    transform:
+        scale(0.97);
+}
+
+
+.planet-sun-weight.revealed .planet-click-hint {
+
+    border-color:
+        rgba(255,
+            255,
+            255,
+            0.15);
+
+    opacity: 0.35;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .planet-section {
+
+        min-height: 100svh;
+
+        padding:
+            90px 18px 100px;
+    }
+
+
+    .planet-content .eyebrow {
+
+        font-size: 8px;
+
+        letter-spacing:
+            0.27em;
+
+        margin-bottom: 15px;
+    }
+
+
+    .planet-content>h2 {
+
+        font-size:
+            clamp(48px,
+                14vw,
+                75px);
+
+        line-height:
+            0.82;
+    }
+
+
+    .planet-content>p:not(.planet-name):not(.planet-story) {
+
+        max-width: 90%;
+
+        margin-top: 22px;
+
+        font-size: 13px;
+    }
+
+
+    .planet-weight-reveal {
+
+        margin-top: 38px;
+    }
+
+
+    .planet-sun-weight {
+
+        min-width: 0;
+
+        width: 100%;
+
+        padding:
+            15px 20px 22px;
+    }
+
+
+    .planet-number {
+
+        font-size:
+            clamp(75px,
+                22vw,
+                125px);
+
+        line-height:
+            0.76;
+    }
+
+
+    .planet-unit {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin-top: 8px;
+
+        font-size: 26px;
+    }
+
+
+    .planet-label {
+
+        margin-top: 18px;
+
+        font-size: 8px;
+
+        letter-spacing:
+            0.22em;
+    }
+
+
+    .planet-click-hint {
+
+        margin-top: 18px;
+
+        font-size: 7px;
+
+        padding:
+            7px 13px;
+    }
+
+
+    .earth-weight-reveal {
+
+        width: 94%;
+    }
+
+
+    .earth-weight-reveal.active {
+
+        margin-top: 25px;
+    }
+
+
+    .earth-weight-reveal h3 {
+
+        font-size:
+            clamp(39px,
+                11vw,
+                60px);
+    }
+
+
+    .earth-weight-reveal p {
+
+        font-size: 18px;
+
+        margin-top: 20px;
+    }
+
+
+    .earth-weight-reveal strong {
+
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+
+    .planet-bottom-note {
+
+        bottom: 18px;
+    }
+
+
+    .planet-bottom-note span {
+
+        font-size: 6px;
+    }
+
+
+    .planet-bottom-note p {
+
+        font-size: 13px;
+    }
+
+}
+
+/* =========================================================
+   THINGS I DIDN'T EXPECT + McDONALD'S
+   CLEAN BOX STYLING
+   ---------------------------------------------------------
+   This block intentionally stays at the end so it can safely
+   override the older generic .section / .first-time rules.
+   ========================================================= */
+
+
+/* =========================================================
+   THINGS I DIDN'T EXPECT
+   ========================================================= */
+
+.unexpected.section {
+    position: relative;
+    width: 100%;
+    min-height: 680px;
+    margin: 0;
+    padding: 85px 7vw;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 75px;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 75% 35%,
+            rgba(223, 223, 223, 0.2) 1px,
+            transparent 1px);
+
+    color: #ffffff;
+}
+
+
+/* subtle texture */
+
+.unexpected.section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle,
+            rgba(223, 223, 223, 0.2) 1px,
+            transparent 1px);
+
+    background-size: 90px 90px;
+    opacity: 0.20;
+}
+
+
+/* thin top inner line */
+
+.unexpected.section::after {
+    content: "";
+    position: absolute;
+
+    top: 30px;
+    left: 7vw;
+    right: 7vw;
+
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* heading */
+
+.unexpected.section .section-heading {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+
+.unexpected.section .eyebrow {
+    margin: 0 0 24px;
+
+    color: #d98243;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.30em;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.unexpected.section .section-heading h2 {
+    margin: 0;
+
+    max-width: 620px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(58px, 6.5vw, 105px);
+    font-weight: 600;
+    line-height: 0.84;
+    letter-spacing: -0.035em;
+
+    color: #000000;
+}
+
+
+/* numbered list */
+
+.unexpected.section .unexpected-list {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    margin: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+
+.unexpected.section .unexpected-list>div {
+    min-height: 88px;
+
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    transition:
+        background 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.unexpected.section .unexpected-list>div:hover {
+    padding-left: 10px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+
+.unexpected.section .unexpected-list>div>span {
+    grid-column: 1;
+
+    color: #d98243;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+
+.unexpected.section .unexpected-list strong {
+    grid-column: 2;
+
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(22px, 2.1vw, 34px);
+    font-weight: 600;
+    line-height: 1.05;
+
+    color: #17130f;
+}
+
+
+/* =========================================================
+   McDONALD'S
+   ========================================================= */
+
+.first-time.section {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(390px, 0.78fr);
+
+    overflow: hidden;
+
+    background: #4e2818;
+    color: #f5eee5;
+}
+
+
+/* thin top inner line */
+
+.first-time.section::after {
+    content: "";
+    position: absolute;
+
+    top: 30px;
+    left: 6vw;
+    right: 6vw;
+
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* text side */
+
+.first-time .first-time-content {
+    position: relative;
+    z-index: 2;
+
+    min-width: 0;
+
+    padding: 85px 6vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+.first-time .first-time-content .eyebrow {
+    margin: 0 0 24px;
+
+    color: #d98243;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.30em;
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+.first-time .first-time-content h2 {
+    margin: 0;
+
+    font-family: var(--serif);
+
+    font-size: clamp(58px, 6.5vw, 105px);
+    font-weight: 600;
+    line-height: 0.84;
+    letter-spacing: -0.035em;
+
+    color: #fffaf2;
+}
+
+
+/* description */
+
+.first-time .first-time-content>p:not(.handwritten) {
+    max-width: 560px;
+
+    margin: 32px 0 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* handwritten line */
+
+.first-time .first-time-content .handwritten {
+    margin: 28px 0 0;
+
+    font-family: var(--hand);
+
+    font-size: 28px !important;
+    font-style: normal;
+
+    line-height: 1.2;
+
+    color: rgba(255, 255, 255, 0.88) !important;
+}
+
+
+/* image side */
+
+.first-time .food-gallery {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    background: #16110f;
+}
+
+
+.first-time .food-gallery img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: saturate(0.92) contrast(1.03);
+
+    transition: transform 0.8s ease;
+}
+
+
+.first-time:hover .food-gallery img {
+    transform: scale(1.035);
+}
+
+
+/* cinematic image gradient */
+
+.first-time .food-gallery::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg,
+            rgba(33, 26, 23, 0.42),
+            /* rgba(255, 66, 8, 0.08), */
+            transparent 68%);
+}
+
+
+/*
+   FIX:
+   The old CSS created an unwanted "FIRST TIME 🍔"
+   pseudo-element over the food image.
+*/
+
+.first-time .food-gallery::before {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .unexpected.section {
+        width: calc(100% - 10vw);
+        grid-template-columns: 1fr;
+        gap: 55px;
+        min-height: auto;
+        padding: 75px 6vw 80px;
+    }
+
+    .first-time.section {
+        width: calc(100% - 10vw);
+        grid-template-columns: 1fr;
+    }
+
+    .first-time .food-gallery {
+        min-height: 560px;
+    }
+
+    .first-time .food-gallery img {
+        min-height: 560px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .unexpected.section,
+    .first-time.section {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+
+    .unexpected.section {
+        padding: 62px 28px 70px;
+        gap: 48px;
+    }
+
+
+    .unexpected.section::after,
+    .first-time.section::after {
+        left: 28px;
+        right: 28px;
+        top: 22px;
+    }
+
+
+    .unexpected.section .section-heading h2,
+    .first-time .first-time-content h2 {
+        font-size: clamp(52px, 14vw, 78px);
+        line-height: 0.86;
+    }
+
+
+    .unexpected.section .unexpected-list>div {
+        min-height: 76px;
+        grid-template-columns: 38px minmax(0, 1fr);
+    }
+
+
+    .unexpected.section .unexpected-list strong {
+        font-size: 22px;
+    }
+
+
+    .first-time.section {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+
+    .first-time .food-gallery {
+        order: 1;
+        min-height: 430px;
+    }
+
+
+    .first-time .food-gallery img {
+        min-height: 430px;
+    }
+
+
+    .first-time .first-time-content {
+        order: 2;
+        padding: 58px 28px 68px;
+    }
+
+
+    .first-time .first-time-content>p:not(.handwritten) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    .first-time .first-time-content .handwritten {
+        font-size: 23px !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .unexpected.section {
+        padding: 55px 22px 62px;
+    }
+
+
+    .unexpected.section .unexpected-list>div {
+        grid-template-columns: 32px minmax(0, 1fr);
+    }
+
+
+    .unexpected.section .unexpected-list strong {
+        font-size: 20px;
+    }
+
+
+    .first-time .first-time-content {
+        padding: 52px 22px 62px;
+    }
+
+
+    .first-time .food-gallery,
+    .first-time .food-gallery img {
+        min-height: 380px;
+    }
+}
+
+/* =========================================
+   UNEXPECTED SECTION — ADD MORE GAP
+========================================= */
+
+.unexpected.section {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    column-gap: 140px;
+    /* LEFT ↔ RIGHT GAP */
+    align-items: center;
+}
+
+.unexpected .section-heading {
+    padding-right: 20px;
+}
+
+.unexpected .unexpected-list {
+    margin-left: 0;
+}
+
+/* GAP BETWEEN SURPRISING AND McdONALS'S */
+.unexpected.section {
+    margin-bottom: 30px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .unexpected.section {
+        column-gap: 70px;
+    }
+
+    .unexpected.section {
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .unexpected.section {
+        grid-template-columns: 1fr;
+        row-gap: 60px;
+    }
+
+    .unexpected.section {
+        margin-bottom: 30px;
+    }
+}
+
+/* =========================================
+   McDONALD'S — MOBILE FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    .first-time.section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* IMAGE */
+    .first-time .food-gallery {
+        width: 100%;
+        min-height: 380px;
+        height: 380px;
+        order: 1;
+    }
+
+    .first-time .food-gallery img {
+        width: 100%;
+        height: 380px;
+        min-height: 380px;
+        object-fit: cover;
+    }
+
+    /* TEXT BOX */
+    .first-time .first-time-content {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        padding: 55px 22px 60px;
+        order: 2;
+
+        overflow: hidden;
+    }
+
+    /* SMALL HEADING */
+    .first-time .first-time-content .eyebrow {
+        margin-bottom: 20px;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+    }
+
+    /* MAIN TITLE */
+    .first-time .first-time-content h2 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(40px, 11vw, 58px);
+        line-height: 0.88;
+        letter-spacing: -0.035em;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    /* DESCRIPTION */
+    .first-time .first-time-content>p:not(.handwritten) {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 28px;
+
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    /* HANDWRITTEN */
+    .first-time .first-time-content .handwritten {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 24px;
+
+        font-size: 21px !important;
+        line-height: 1.25;
+    }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+    .first-time .first-time-content {
+        padding: 48px 20px 55px;
+    }
+
+    .first-time .first-time-content h2 {
+        font-size: clamp(38px, 10.5vw, 50px);
+        line-height: 0.9;
+    }
+
+    .first-time .first-time-content>p:not(.handwritten) {
+        font-size: 13px;
+    }
+
+    .first-time .first-time-content .handwritten {
+        font-size: 20px !important;
+    }
+}
+/* =====================================================
+   LANGUAGE SWITCHER
+   WANDER WITH AMAN
+===================================================== */
+
+.language-switcher {
+    position: relative;
+    z-index: 1001;
+}
+
+
+/* =====================================================
+   LANGUAGE BUTTON
+===================================================== */
+
+.language-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-width: 72px;
+    height: 38px;
+
+    padding: 0 13px;
+
+    border: 1px solid rgba(255, 250, 242, 0.28);
+    border-radius: 999px;
+
+    background: rgba(255, 250, 242, 0.08);
+
+    color: #fffaf2;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.language-btn:hover {
+    background: rgba(255, 250, 242, 0.16);
+
+    border-color: rgba(255, 250, 242, 0.5);
+
+    transform: translateY(-1px);
+}
+
+
+.language-globe {
+    font-size: 15px;
+
+    line-height: 1;
+}
+
+
+.language-current {
+    font-size: 11px;
+
+    letter-spacing: 0.12em;
+}
+
+
+.language-arrow {
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    transition: transform 0.3s ease;
+}
+
+
+.language-switcher.open .language-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+.language-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 190px;
+
+    padding: 8px;
+
+    background: rgba(24, 19, 15, 0.97);
+
+    border: 1px solid rgba(255, 250, 242, 0.14);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.28);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(0.97);
+
+    transform-origin: top right;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+
+    max-height: 420px;
+
+    overflow-y: auto;
+}
+
+
+.language-switcher.open .language-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =====================================================
+   LANGUAGE OPTIONS
+===================================================== */
+
+.language-menu button {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 11px 13px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #fffaf2;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.language-menu button:hover {
+    background: rgba(255, 250, 242, 0.09);
+
+    padding-left: 17px;
+}
+
+
+.language-menu button.active {
+    background: rgba(198, 107, 50, 0.18);
+
+    color: #f1a06d;
+}
+
+
+/* =====================================================
+   CUSTOM SCROLLBAR
+===================================================== */
+
+.language-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+.language-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.language-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 250, 242, 0.25);
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   HIDE GOOGLE TRANSLATE UI
+===================================================== */
+
+#google_translate_element {
+    position: fixed;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    left: -9999px;
+
+    top: -9999px;
+}
+
+
+/* Google top translation bar */
+
+body {
+    top: 0 !important;
+}
+
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+
+.goog-tooltip {
+    display: none !important;
+}
+
+
+.goog-te-spinner-pos {
+    display: none !important;
+}
+
+
+/* Google adds this sometimes */
+
+.skiptranslate {
+    display: initial;
+}
+
+
+/* =====================================================
+   DESKTOP NAVBAR ALIGNMENT
+===================================================== */
+
+.navbar {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+    margin-left: auto;
+
+    margin-right: 28px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .language-switcher {
+        margin-left: auto;
+
+        margin-right: 12px;
+    }
+
+
+    .language-btn {
+        min-width: 64px;
+
+        height: 36px;
+
+        padding: 0 10px;
+    }
+
+
+    .language-menu {
+        position: fixed;
+
+        top: 70px;
+
+        right: 18px;
+
+        width: 190px;
+
+        max-height: 65vh;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .language-switcher {
+        margin-right: 8px;
+    }
+
+
+    .language-btn {
+        min-width: 58px;
+
+        height: 34px;
+
+        gap: 5px;
+
+        padding: 0 9px;
+    }
+
+
+    .language-globe {
+        font-size: 14px;
+    }
+
+
+    .language-current {
+        font-size: 10px;
+    }
+
+
+    .language-menu {
+        right: 12px;
+
+        width: 180px;
+    }
+
+}
