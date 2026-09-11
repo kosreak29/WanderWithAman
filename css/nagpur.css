@@ -3707,6 +3707,56 @@ button {
     margin-top: 30px;
 }
 
+.last-bite {
+    margin-bottom: 30px;
+}
+
+.photo-wall {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 80px 0;
+}
+
+.photo-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+
+    animation: photoScroll 35s linear infinite;
+}
+
+.photo-wall:hover .photo-track {
+    animation-play-state: paused;
+}
+
+.photo-track img {
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    transition: all .4s ease;
+}
+
+.photo-track img:hover {
+    transform: scale(1.08);
+    z-index: 10;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+}
+
+@keyframes photoScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 /* =====================================================
    RETURN
@@ -3722,6 +3772,10 @@ button {
 
 .return-section img {
     height: 100%;
+}
+
+.return-section {
+    margin-bottom: 30px;
 }
 
 .return-overlay {
@@ -3767,6 +3821,7 @@ button {
 
     line-height: 1.8;
 }
+
 
 
 /* =====================================================
@@ -6060,6 +6115,25 @@ footer {
     color: #f5eee5;
 }
 
+/* =========================================
+   GAP AFTER McDONALD'S SECTION
+========================================= */
+
+.first-time {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+    .first-time {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .first-time {
+        margin-bottom: 60px;
+    }
+}
 
 /* thin top inner line */
 
@@ -6122,7 +6196,6 @@ footer {
 
     color: #fffaf2;
 }
-
 
 /* description */
 
@@ -6880,4 +6953,31 @@ body {
         width: 180px;
     }
 
+}
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #6b4f31;
+    color: #fff;
+    z-index: 99999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, background .3s;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: #d8a84b;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
