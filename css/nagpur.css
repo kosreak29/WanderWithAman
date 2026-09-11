@@ -199,6 +199,247 @@ button {
 }
 
 /* =====================================================
+   MOBILE NAVBAR — FINAL FIX
+===================================================== */
+
+@media (max-width: 900px) {
+
+    /* NAVBAR */
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+
+        height: 72px;
+
+        padding: 12px 18px !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+
+        overflow: visible;
+    }
+
+
+    /* =================================================
+       LOGO
+    ================================================= */
+
+    .navbar .logo {
+        display: block;
+
+        width: auto;
+        max-width: 170px;
+
+        padding: 0 !important;
+        margin: 0;
+
+        white-space: nowrap;
+
+        font-size: 25px;
+
+        line-height: 1;
+
+        flex-shrink: 1;
+    }
+
+
+    /* =================================================
+       HIDE DESKTOP LINKS
+    ================================================= */
+
+    .navbar .nav-links {
+        display: none !important;
+
+        position: absolute;
+
+        visibility: hidden;
+    }
+
+
+    /* =================================================
+       HAMBURGER BUTTON
+    ================================================= */
+
+    .navbar .menu-btn {
+        display: flex !important;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        margin: 0;
+
+        flex-shrink: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        background: transparent;
+
+        border: 0;
+
+        cursor: pointer;
+
+        z-index: 1005;
+    }
+
+
+    .navbar .menu-btn span {
+        display: block;
+
+        width: 22px;
+        height: 1.5px;
+
+        background: #fffaf2;
+
+        border-radius: 2px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+
+    /* =================================================
+       LANGUAGE BUTTON
+    ================================================= */
+
+    .language-switcher {
+        margin-left: auto !important;
+
+        margin-right: 2px !important;
+
+        flex-shrink: 0;
+    }
+
+
+    .language-btn {
+        height: 36px;
+
+        min-width: 58px;
+
+        padding: 0 9px;
+    }
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    .navbar.mobile-open .nav-links {
+
+        display: flex !important;
+
+        visibility: visible;
+
+        position: absolute;
+
+        top: 72px;
+
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 25px 20px !important;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 22px;
+
+        background: rgba(20, 15, 12, 0.97);
+
+        border-top:
+            1px solid rgba(255, 250, 242, 0.10);
+
+        border-bottom:
+            1px solid rgba(255, 250, 242, 0.10);
+
+        backdrop-filter: blur(15px);
+
+        -webkit-backdrop-filter: blur(15px);
+
+        z-index: 1000;
+    }
+
+
+    .navbar.mobile-open .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 8px 0;
+
+        text-align: center;
+
+        color: #fffaf2;
+
+        font-size: 14px;
+
+        text-decoration: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE — iPhone / 390–430px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 68px;
+
+        padding:
+            10px 16px !important;
+    }
+
+
+    .navbar .logo {
+
+        max-width: 145px;
+
+        font-size: 22px;
+
+        white-space: nowrap;
+    }
+
+
+    .navbar .menu-btn {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .navbar .menu-btn span {
+
+        width: 20px;
+    }
+
+
+    .language-switcher {
+
+        margin-right: 0 !important;
+    }
+
+}
+
+/* =====================================================
    HERO
 ===================================================== */
 
@@ -6270,6 +6511,7 @@ footer {
         font-size: 20px !important;
     }
 }
+
 /* =====================================================
    LANGUAGE SWITCHER
    WANDER WITH AMAN
@@ -6386,8 +6628,7 @@ footer {
     visibility: hidden;
 
     transform:
-        translateY(-8px)
-        scale(0.97);
+        translateY(-8px) scale(0.97);
 
     transform-origin: top right;
 
@@ -6408,8 +6649,7 @@ footer {
     visibility: visible;
 
     transform:
-        translateY(0)
-        scale(1);
+        translateY(0) scale(1);
 }
 
 
